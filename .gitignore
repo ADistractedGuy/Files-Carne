@@ -1,0 +1,21 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Config local
+.env
+
+# Editor
+.vscode/
+
+# Dependências futuras (caso use Node)
+node_modules/
+
+# Build
+dist/
+build/
+
+posts/
