@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File&Carne</title>
+
+    <script src="script.js" defer></script>
+
     
     <!--Referencia ao Arquivo CSS para design e cores-->
     <link rel="stylesheet" href="style.css">
@@ -24,12 +27,37 @@
     </div>
 
     <div class="container">
-        <a href="#" class="btt">Item 1</a>
-        <a href="#" class="btt">Item 2</a>
-        <a href="#" class="btt">Item 3</a>
-        <a href="#" class="btt">Item 4</a>
-        <a href="#" class="btt">Item 5</a>
-        <a href="#" class="btt">Item 6</a>
+        <a href="#" id="btt-sound" class="btt">
+            <img src="imgs/pixel-meats/pixel-meats-32/bacon.png" class="icon">
+            Item 1
+            <img src="imgs/pixel-meats/pixel-meats-32/bacon.png" class="icon">
+        </a>
+        <a href="#" id="btt-sound" class="btt">
+            <img src="imgs/pixel-meats/pixel-meats-32/hamburger-patty.png" class="icon">
+            Item 2
+            <img src="imgs/pixel-meats/pixel-meats-32/hamburger-patty.png" class="icon">
+        
+        </a>
+        <a href="#" id="btt-sound" class="btt">
+            <img src="imgs/pixel-meats/pixel-meats-32/meatball.png" class="icon">
+            Item 3
+            <img src="imgs/pixel-meats/pixel-meats-32/meatball.png" class="icon">
+        </a>
+        <a href="#" id="btt-sound" class="btt">
+            <img src="imgs/pixel-meats/pixel-meats-32/chicken-leg.png" class="icon">
+            Item 4
+            <img src="imgs/pixel-meats/pixel-meats-32/chicken-leg.png" class="icon">
+        </a>
+        <a href="#" id="btt-sound" class="btt">
+            <img src="imgs/pixel-meats/pixel-meats-32/ham.png" class="icon">
+            Item 5
+            <img src="imgs/pixel-meats/pixel-meats-32/ham.png" class="icon">
+        </a>
+        <a href="#" id="btt-sound" class="btt">
+            <img src="imgs/pixel-meats/pixel-meats-32/tbone-steak.png" class="icon">
+            Item 6 
+            <img src="imgs/pixel-meats/pixel-meats-32/tbone-steak.png" class="icon">
+        </a>
     </div>
 </header>
 
@@ -87,15 +115,32 @@
 <div class="space"></div>
 
 <section class="category">
-    <div>
-        <h3>Section 1</h3>
-        <p>This is the first section of the website.</p>
+    <div class="cat-content">
+        <div class="Quiz">
+            <h1>Quiz</h1>
+            <p>Teste seu conhecimento </p>
+            <p>Descubra se realmente sabe o sulficiente sobre Carnes e preparo</p>
+
+            <a href="#" id="btt-quiz" class="btt-quiz">Comece agora</a>
+
+        </div>
     </div>
 </section>
 
 <footer>
     <p class="foot">&copy; 2024 My Website. All rights reserved.</p>
 </footer>
+<!--
+Por que usar inline no <head>?
+    
+Isso é útil quando o código é crítico, por exemplo:
+
+lembrar depois -- Detectar tema (dark/light) antes da tela aparecer
+Configurar algo essencial para evitar “flicker” visual
+Pequenas configurações iniciais    
+    
+-->
 
 </body>
+
 </html>
