@@ -1,12 +1,16 @@
 //function to play sound when button is clicked 
 //set it a coin sfx when the button is clicked
 
-
-
-getElementById('btt-sound').addEventListener('click', function() {
-    var audio = new Audio('sound.mp3');
+//SFX MODULE
+//create a function to play sound when button is clicked
+document.getElementById('btt-container').addEventListener('click', function() {
+    var audio = new Audio('SFX/coin_collect_2.mp3');
     audio.play();
 });
+
+
+
+
 
 //remenber it to add the sound.mp3 file in the same directory as the script.js file for it to work properly.
 
