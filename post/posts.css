@@ -1,0 +1,160 @@
+:root {
+    --bg-main: #0f0202;
+    --bg-secondary: #1a0505;
+    --red-main: #5a0f0f;
+    --red-strong: #8b1e1e;
+    --gold: #c9a14a;
+    --text: #f5e6c8;
+}
+
+* {
+    image-rendering: pixelated;
+    margin: 0;
+    padding: 0;
+    font-family: "Jersey 10", sans-serif;
+}
+
+/*Definir tamanho da fonte para o elemento html (global - De todo o site)*/
+html {
+    font-size: 20px; /* try 18–20px for Jersey 10 */
+}
+
+/*-------Responsive Design for Mobile Devices-------
+Use media queries to adjust font sizes and layout for smaller screens. For example:
+Não mexer ou trocar qualquer coisa deste comentário, usar de referencia para o desenvolvimento de responsividade do site, principalmente para mobile.
+@media (max-width: 600px) {
+    html {
+        font-size: 18px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+}
+*/
+
+/*Global background for the site*/
+body {
+    font-size: 1rem;
+    background: radial-gradient(circle at top, #2b0a0a, #0f0202);
+    color: var(--text);
+}
+
+/* Global font family for all text elements */
+.jersey-10-regular {
+  font-family: "Jersey 10", sans-serif;
+  font-style: normal;
+}  
+
+/* largura da barra */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* fundo */
+  ::-webkit-scrollbar-track {
+    background: var(--bg-main);
+  }
+  
+  /* "pegador" (thumb) */
+  ::-webkit-scrollbar-thumb {
+    background: var(--red-strong);
+    border-radius: 20px;
+  }
+  
+  /* hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--red-main);
+  }
+
+
+
+/*----------Header----------*/
+
+
+header{
+    background: linear-gradient(to right, #1a0505, #2b0a0a);
+    border-bottom: 2px solid var(--gold);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+    color: white;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    text-size-adjust: 100%;
+    font-size: 1.5rem;
+}
+
+/*definir tamanho para o elemento logo
+/*Defines position and size*/
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: contrast(1.1) saturate(1.6);
+}
+
+/*Defines spacing and layout for the logo area*/
+.logo-area{
+    cursor: pointer;
+    gap: 10px;
+    display: flex;
+    text-decoration: none; /* remove underline */
+    color: inherit; /* mantém cor do texto */
+}
+/*Responsible for the hover effect (Animation)*/
+.logo-area:hover{
+    scale: 1.10;
+    transition: 0.3s;
+}
+
+/*The all might "Container" responsible for responsive and btt layout*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--red-strong);
+    border-radius: 10px;
+    justify-content: space-around;
+    margin-bottom: 4px;
+}
+
+/*btt - button of the container "item 1" "item 2" "..." "..."*/
+.btt { 
+    color: var(--text);
+    background: #5a0f0f;
+    border: 2px solid var(--gold);
+    text-transform: uppercase;
+    font-size: 1rem;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    flex-grow: 2;
+    gap: 8px;
+}
+
+.btt img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+
+}
+
+/*button animation (again)*/
+.btt:hover {
+    transform: scale(1.1);
+    background: #8b1e1e;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
