@@ -10,7 +10,7 @@ document.getElementById('btt-container').addEventListener('click', function() {
 
 
 
-
+console.log ("funcionando!")
 
 //remenber it to add the sound.mp3 file in the same directory as the script.js file for it to work properly.
 
