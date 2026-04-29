@@ -19,3 +19,16 @@ dist/
 build/
 
 posts/
+/imgs/
+
+
+#ignore just in the first commit
+script.js
+
+style.css
+
+README.md
+
+SFX/
+
+tests/
