@@ -19,5 +19,21 @@ dist/
 build/
 
 posts/
+<<<<<<< HEAD
 
 post/
+=======
+/imgs/
+
+
+#ignore just in the first commit
+script.js
+
+style.css
+
+README.md
+
+SFX/
+
+tests/
+>>>>>>> 32e236b6d561cee350491a1e741e72bb50845c94
