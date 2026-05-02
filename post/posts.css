@@ -115,6 +115,7 @@ header{
     border-radius: 10px;
     justify-content: space-around;
     margin-bottom: 4px;
+
 }
 
 /*btt - button of the container "item 1" "item 2" "..." "..."*/
@@ -145,13 +146,17 @@ header{
 
 }
 
-/*button animation (again)*/
-.btt:hover {
-    transform: scale(1.1);
-    background: #8b1e1e;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
 
+/*button animation (again)*/
+
+@media (min-width: 768px) {
+    .btt:hover {
+        transform: scale(1.05);
+        background: #8b1e1e;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+    }
 }
+
 
 
 a{
