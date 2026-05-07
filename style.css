@@ -127,7 +127,6 @@ header{
 
 @media (max-width: 600px) {
 
-    
         .container .btt:nth-child(n+4) {
         display: none;
     }
@@ -164,14 +163,15 @@ header{
 
 /*button animation (again)*/
 
-
-.btt:hover {
-    transform: translateY(-4px); /* sobe em vez de crescer */
-    background: #8b1e1e;
-    box-shadow:
-    0 0 5px #ff0000,
-    0 0 10px #ff0000,
-    0 0 20px #ff0000;        
+@media (min-width: 600px){
+    .btt:hover {
+        transform: translateY(-4px); /* sobe em vez de crescer */
+        background: #8b1e1e;
+        box-shadow:
+        0 0 5px #ff0000,
+        0 0 10px #ff0000,
+        0 0 20px #ff0000;        
+}
 }
 
 .btt.click {
