@@ -52,6 +52,28 @@
       font-style: normal;
     }  
     
+    .pixelify-sans-400 {
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+    .pixelify-sans-title {
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pixelify-sans-btt {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+    
     /*-----------End Global Styles-----------*/
     
     /* largura da barra */
@@ -187,11 +209,7 @@
             0 0 20px #ff0000;        
     }
     }
-    
-    .btt.click {
-        transform: translateX(-4px);
-    }
-    
+
     a{
         text-decoration: none;
         color: white;
@@ -216,7 +234,7 @@
         flex-direction: column;
         justify-content: relative;
         font-size: 1.5rem;
-        padding: 1%;
+        padding: 0.5%;
         border-radius: 10px;
         border-radius: 29px 29px 0 0;
         background: #5a0f0f;
@@ -225,7 +243,12 @@
         text-shadow: 0 0 5px rgba(255, 215, 0, 0.4);
     }
 
-    
+    .title-h1 {
+        font-size: 1.5rem;
+        font-family: "Pixelify Sans", sans-serif;
+        font-weight: 400;
+    }   
+
     .hero h1 {
         display: flex;
         justify-content: center;
@@ -262,54 +285,6 @@
         }
     }
     
-    
-    
-    
-    
-    
-    .hero-content {
-        display: grid;
-        grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-    }
-    
-    
-    .post{
-        padding: 20px 10px;
-        border-radius: 10px;
-        background: #2b0a0a;
-    
-        margin: 20px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        border: 2px solid #5a0f0f;
-        position: relative;
-        transition: 0.3s;
-    }
-    
-    .post:hover {
-        transform: translateY(-5px) scale(1.03);
-        border-color: var(--gold);
-        box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
-    }
-    
-    .img_post {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        border-bottom: 2px solid var(--gold);
-        filter: contrast(1.1) saturate(1.1);
-    }
-    
-    .img_icon{
-        width: 15%;
-        display: block;
-        margin: 0 auto;
-        filter: contrast(1.1) saturate(1.1);
-    
-    
-    
-        border: 1px solid #5a0f0f;
-    }
-    
     /* Adjust the height as needed */
     /*Create a space between sections*/
     .space {
@@ -323,110 +298,7 @@
         margin-top: 15px;
     }
     /*--------------Category Section--------------*/
-    .category {
-        flex-wrap: wrap;
-        flex-grow: 2;
-        justify-content: space-around;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        background: var(--bg-main);
-        padding: 10px 20px;
-        border-radius: 29px;
-        margin: 10px;
-        gap: 20px;
-        box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
-        border-top: 2px solid var(--gold);
-        color: var(--text);
-        letter-spacing: 1px;
-    }
-    
-    
-    
-    .Quiz {
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-        border: 2px solid var(--gold);
-        width: 500px;
-        text-align: center;
-        justify-content: center;
-        border-radius: 29px;
-    }
-    
-    @media (max-width: 600px) {
-        .Quiz {
-            width:90%;
-    
-        }
-    
-        .Quiz h2 {
-            font-size: 1.5rem;
-        }
-        .Quiz p {
-            font-size: 1rem;
-        }
-    
-        .Quiz .btt-quiz {
-            width: 50%;
-        }
-    }
-    
-    .btt-quiz {
-        color: var(--text);
-        background: #5a0f0f;
-        border: 2px solid var(--gold);
-        text-transform: uppercase;
-        font-size: 1rem;
-        box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 150px;
-        height: 30px;
-        margin: 10px auto;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-    
-    .btt-quiz:hover {
-        transform: translatey(-4px);
-        background: #8b1e1e;
-        box-shadow:
-            0 0 5px #ff0000,
-            0 0 10px #ff0000,
-            0 0 20px #ff0000;  
-    }
-    
-    /* Work with this later*/
-    /*
-    a:visited{
-    
-        color: green;
-    }
-    */
-    
-    
-    /*
-    
-    
-    h1 {
-        font-size: 2.5rem;
-    }
-    
-    h2 {
-        font-size: 2rem;
-    }
-    
-    p, a {
-        font-size: 1rem;
-    }
-    
-    .btt {
-        font-size: 1.1rem;
-    }*/
+
     footer{
         margin-top:auto;
         border-radius: 50px; 
@@ -435,6 +307,9 @@
         background: #1a0505;
         border-top: 2px solid var(--gold);
         text-align: center;
+        margin-left:18px;
+        margin-right:18px;
+        margin-bottom: 20px;
     }
     
     .B-cat{
