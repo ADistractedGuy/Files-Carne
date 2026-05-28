@@ -140,6 +140,7 @@ header{
     transition: 0.3s;
     cursor: pointer;
 }
+
 /*Responsible for the hover effect (Animation)*/
 .logo-area:hover{
     scale: 1.10;
@@ -191,6 +192,7 @@ header{
     flex-grow: 2;
     gap: 8px;
     transition: all 0.5s ease;
+    letter-spacing: 1px;
 }
 
 .btt img {
@@ -212,8 +214,13 @@ header{
 }
 }
 
-.btt.click {
-    transform: translateX(-4px);
+
+.btt:active,
+.btt-quiz:active {
+    transform: scale(0.95) translateY(2px);
+    box-shadow:
+        0 0 2px #ff0000,
+        0 0 5px #ff0000;
 }
 
 a{
@@ -265,6 +272,7 @@ a{
     padding: 1%;
     color: rgb(255, 255, 255);
     text-shadow: black 1px 1px 2px;
+    letter-spacing: 2px;
 }
 
 
@@ -287,9 +295,9 @@ a{
 }
 
 
-@media(max-width: 650px){
+@media(max-width: 600px){
     .hero h1 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .hero p {
@@ -300,7 +308,7 @@ a{
         grid-template-columns: 1fr;
     }
 
-    .hero-content .post:nth-child(n+3) {
+    .hero-content .post:nth-child(n+4) {
         display: none;
     }
 }
@@ -318,7 +326,7 @@ a{
         grid-template-columns: 1fr;
     }
 
-    .hero-content .post:nth-child(n+4) {
+    .hero-content .post:nth-child(n+5) {
         display: none;
     }
 }
@@ -337,6 +345,9 @@ a{
     }
 
     .hero-content .post:nth-child(n+7) {
+        display: none;
+    }
+    .post:hover{
         display: none;
     }
 }
@@ -360,6 +371,7 @@ a{
     margin: 20px;
     position: relative;
     transition: 0.3s;
+
 }
 
 .post:hover {
@@ -368,11 +380,24 @@ a{
     box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
 }
 
+.post:active {
+    transform: scale(0.95) translateY(2px);
+    box-shadow:
+        0 0 2px #ff0000,
+        0 0 5px #ff0000;
+}
+
+@media (max-width: 500px){
+    .post:hover{
+        display: none;
+    }
+}
+
 .img_post {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    border-bottom: 2px solid var(--gold);
+    border-bottom:2 2px solid var(--gold);
     filter: contrast(1.1) saturate(1.1);
 }
 
@@ -413,8 +438,6 @@ a{
     margin-bottom: 20px;
 }
 
-
-
 .Quiz {
     display: flex;
     flex-direction: column;
@@ -431,19 +454,23 @@ a{
 @media (max-width: 600px) {
     .Quiz {
         width:90%;
-
+        background: none;
+        border: none;
     }
-
     .Quiz h2 {
         font-size: 1.5rem;
     }
     .Quiz p {
         font-size: 1rem;
-    }
-
+        }
     .Quiz .btt-quiz {
         width: 50%;
     }
+
+    .btt-quiz:hover{
+        display: none ;
+    }
+
 }
 
 .btt-quiz {
@@ -471,6 +498,14 @@ a{
         0 0 5px #ff0000,
         0 0 10px #ff0000,
         0 0 20px #ff0000;  
+}
+
+.btt:active,
+.btt-quiz:active {
+    transform: scale(0.95) translateY(2px);
+    box-shadow:
+        0 0 2px #ff0000,
+        0 0 5px #ff0000;
 }
 
 /* Work with this later*/
