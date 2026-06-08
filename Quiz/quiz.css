@@ -18,6 +18,8 @@
     
     /*Definir tamanho da fonte para o elemento html (global - De todo o site)*/
     html {
+        height: 100%;
+        margin: 0;
         scroll-behavior: smooth;
         font-size: 20px; /* try 18–20px for Jersey 10 */
     }
@@ -38,10 +40,17 @@
     */
     
     /*Global background for the site*/
-    body {
+    body { 
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
         font-size: 1rem;
         background: radial-gradient(circle at top, #2b0a0a, #0f0202);
         color: var(--text);
+    }
+    .hero{
+        flex: 1;
     }
     
     /* Global font family for all text elements */
@@ -229,6 +238,170 @@
     }
     /*----------Header End----------*/
     
+
+    .hero {
+        background: #1a0505;
+        border-radius: 29px;
+        margin: 20px;
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+        border: 2px solid var(--gold);
+    
+    }   
+    
+    .title {
+        letter-spacing: 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: relative;
+        font-size: 1.5rem;
+        padding: 0.5%;
+        border-radius: 10px;
+        border-radius: 29px 29px 0 0;
+        background: #5a0f0f;
+        border-bottom: 2px solid var(--gold);
+        color: var(--gold);
+        text-shadow: 0 0 5px rgba(255, 215, 0, 0.4);
+    }
+
+    .title-h1 {
+        font-size: 1.5rem;
+        font-family: "Pixelify Sans", sans-serif;
+        font-weight: 400;
+    }   
+
+    .hero h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 2rem;
+        padding: 1%;
+        color:var(--text);
+        text-shadow: black 1px 1px 2px;
+    }
+    
+    .hero p {
+        display: flex;
+        justify-content: center;
+        font-size: 1.2rem;
+        padding: 1%;
+        color: rgb(255, 255, 255);
+        text-shadow: black 1px 1px 2px;
+        letter-spacing: 2px;
+    }
+    
+    @media(max-width: 600px){
+        .hero h1 {
+            font-size: 1.5rem;
+        }
+    
+        .hero p {
+            font-size: 1rem;
+        }
+    
+            .hero-content {
+            grid-template-columns: 1fr;
+        }
+    
+        .hero-content .post:nth-child(n+3) {
+            display: none;
+        }
+    }
+    
+    /* Adjust the height as needed */
+    /*Create a space between sections*/
+    .space {
+        height: 1px; 
+    }
+    
+    .p-hero{
+        margin-left: 25px;
+        margin-bottom: 30px;
+        margin-right: 25px;
+            margin-top: 15px;
+    }
+
+
+    .progress-container {
+        
+        position: relative;
+    
+        width: 100%;
+        max-width: 660px;
+        height: 35px;
+    
+        background: #2b0a0a;
+        border: 2px solid var(--gold);
+        border-radius: 10px;
+    
+        overflow: hidden;
+        margin: 20px auto;
+    
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    
+    .progress-bar {
+        width: 10%;
+        height: 100%;
+    
+        background: linear-gradient(
+            90deg,
+            var(--red-main),
+            var(--red-strong)
+        );
+    
+        transition: width 0.4s ease;
+    
+        box-shadow:
+            0 0 5px rgba(255,0,0,0.4),
+            0 0 10px rgba(255,0,0,0.3);
+    }
+    
+    .progress-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--text);
+        font-size: 1rem;
+        z-index: 10;
+        text-shadow:
+            1px 1px 2px black,
+            -1px -1px 2px black;
+        pointer-events: none;
+    }
+
+
+    .div-btt-quiz{
+        display: flex;
+        justify-items: center;
+        justify-content: space-evenly;
+        
+    }
+
+    .btt-quiz {
+        margin-bottom: 15px;
+        color: var(--text);
+        background:#5a0f0f;
+        border: 2px solid var(--gold);
+        text-transform: uppercase;
+        font-size: 1rem;
+        box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+        
+        width: 150px;
+        height: 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .btt-quiz:hover {
+        transform: translatey(-4px);
+        background: #8b1e1e;
+        box-shadow:
+            0 0 5px #ff0000,
+            0 0 10px #ff0000,
+            0 0 20px #ff0000;  
+    }
+
     footer{
         margin-top:auto;
         border-radius: 50px; 

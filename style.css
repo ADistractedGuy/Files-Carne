@@ -408,6 +408,32 @@ a{
     filter: contrast(1.1) saturate(1.1);    
     border: 1px solid #5a0f0f;
 }
+.btt-quiz {
+    color: var(--text);
+    background: #5a0f0f;
+    border: 2px solid var(--gold);
+    text-transform: uppercase;
+    font-size: 1rem;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 30px;
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btt-quiz:hover {
+    transform: translatey(-4px);
+    background: #8b1e1e;
+    box-shadow:
+        0 0 5px #ff0000,
+        0 0 10px #ff0000,
+        0 0 20px #ff0000;  
+}
 
 /* Adjust the height as needed */
 /*Create a space between sections*/
@@ -473,32 +499,6 @@ a{
 
 }
 
-.btt-quiz {
-    color: var(--text);
-    background: #5a0f0f;
-    border: 2px solid var(--gold);
-    text-transform: uppercase;
-    font-size: 1rem;
-    box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 30px;
-    margin: 10px auto;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btt-quiz:hover {
-    transform: translatey(-4px);
-    background: #8b1e1e;
-    box-shadow:
-        0 0 5px #ff0000,
-        0 0 10px #ff0000,
-        0 0 20px #ff0000;  
-}
 
 .btt:active,
 .btt-quiz:active {
