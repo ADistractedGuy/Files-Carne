@@ -9,6 +9,17 @@
 }
 
 
+:root.white {
+    --headerclaro: oklch(85.1% 0.076 70.697);
+    --containerclaro:oklch(45.5% 0.188 13.697);
+    --bttclaro: oklch(70.8% 0.114 19.571);
+    --heroclaro: oklch(45.5% 0.188 13.697);
+    --titleclaro:oklch(85.1% 0.076 70.697);
+    --postclaro: oklch(70.8% 0.114 19.571) ;
+    --bodyclaro: oklch(30% 0.159 10.272);
+}
+
+
 * {
     image-rendering: pixelated;
     margin: 0;
@@ -46,33 +57,33 @@ body {
 
 /* Global font family for all text elements */
 .jersey-10-regular {
-  font-family: "Jersey 10", sans-serif;
-  font-style: normal;
+    font-family: "Jersey 10", sans-serif;
+    font-style: normal;
 }  
 
 
 .pixelify-sans-400 {
-  font-family: "Pixelify Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 1.3rem;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.3rem;
 }
 
 .pixelify-sans-title {
-  font-family: "Pixelify Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 2rem;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2rem;
 }
 
 .pixelify-sans-btt {
-  font-family: "Pixelify Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 1rem;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1rem;
 }
 /*-----------End Global Styles-----------*/
 
@@ -81,24 +92,24 @@ body {
 /*----------Barra de Rolagem------------*/
 
 ::-webkit-scrollbar {
-  width: 10px;
+    width: 10px;
 }
 
 /* fundo */
 ::-webkit-scrollbar-track {
-  background: var(--bg-secondary);
+    background: var(--bg-secondary);
 }
 
 /* "pegador" (thumb) */
 ::-webkit-scrollbar-thumb {
-  background: var(--red-strong);
-  border-radius: 20px;
-  border: 1px solid var(--gold);
+    background: var(--red-strong);
+    border-radius: 20px;
+    border: 1px solid var(--gold);
 }
 
 /* hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--red-main);
+    background: var(--red-main);
 }
 
 /*--------fim da Barra de Rolagem---------*/
@@ -507,3 +518,41 @@ background-color: aqua;
     align-items: center;
     justify-content: center;
 }
+
+
+/* ======== ABOUT.HTML ======== */
+
+.hero p {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1%;
+    color: rgb(255, 255, 255);
+    text-shadow: black 1px 1px 2px;
+    letter-spacing: 2px;
+}
+
+
+.p-hero{
+    margin-left: 25px;
+    margin-bottom: 30px;
+    margin-right: 25px;
+    margin-top: 15px;
+}
+
+/* ======== FIM - ABOUT.HTML ======== */
+
+
+/* ======== ADMIN.HTML ========*/
+
+
+
+
+
+/* ======== FIM - ADMIN.HTML ========*/
+
+
+/* ======== Quiz.HTML ========*/
+/* ======== FIM - Quiz.HTML ========*/
+
+
