@@ -160,6 +160,7 @@ header{
 
 /*The all might "Container" responsible for responsive and btt layout*/
 .container {
+    -webkit-text-stroke: #0f0202 0.5px;
     z-index: 1000;
     position: sticky;
     top: 10px;
@@ -254,6 +255,7 @@ a{
 }   
 
 .title {
+    -webkit-text-stroke: #0f0202 1px;
     letter-spacing: 2px;
     display: flex;
     flex-direction: column;
@@ -275,6 +277,9 @@ a{
     padding: 1%;
     color:var(--text);
     text-shadow: black 1px 1px 2px;
+    -webkit-text-stroke: #0f0202 0.7px;
+
+filter: contrast(10.1) saturate(0.6);
 }
 
 .hero p {
@@ -327,7 +332,13 @@ a{
     margin: 20px;
     position: relative;
     transition: 0.3s;
+}
 
+@media (min-width: 600px) {
+    .post h1{
+        font-size: 1.4rem;
+    }
+    
 }
 
 .post:hover {
@@ -355,6 +366,10 @@ a{
     border-radius: 10px;
     border-bottom:2 2px solid var(--gold);
     filter: contrast(1.1) saturate(1.1);
+    border: solid var(--gold);
+    border-top: 10px;
+    border-left: 10px;
+    border-right: 10px; 
 }
 
 .img_icon{
@@ -434,6 +449,10 @@ a{
 }
 
 @media (max-width: 600px) {
+    
+
+
+    
     .Quiz {
         width:90%;
         background: none;
