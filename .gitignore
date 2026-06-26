@@ -18,9 +18,7 @@ node_modules/
 dist/
 build/
 
-posts/
 
-post/
 
 prettierrc.json
 
