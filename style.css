@@ -279,7 +279,7 @@ a{
     text-shadow: black 1px 1px 2px;
     -webkit-text-stroke: #0f0202 0.7px;
 
-filter: contrast(10.1) saturate(0.6);
+    filter: contrast(10.1) saturate(0.6);
 }
 
 .hero p {
@@ -365,7 +365,7 @@ filter: contrast(10.1) saturate(0.6);
     height: auto;
     border-radius: 10px;
     border-bottom:2 2px solid var(--gold);
-    filter: contrast(1.1) saturate(1.1);
+    filter: contrast(1.2) saturate(1.0);
     border: solid var(--gold);
     border-top: 10px;
     border-left: 10px;
