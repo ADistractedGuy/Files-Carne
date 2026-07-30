@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+<head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File&Carne</title>
     
     <!--Referencia ao Arquivo CSS para design e cores-->
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style/style.css">
 
     <!--Referencia a fonte do google fonts para o estilo de letra-->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -20,6 +20,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+
+    <script src="js/quiz/quiz.jsS" defer></script>
+    <script src="scripts-js/main.js" defer></script>
 </head>
 <body>
 
@@ -36,9 +39,11 @@
 <nav class="container">
     <a href="../About/about.html" id="btt-sound" class="btt">
         <img src="../imgs/pixel-meats/pixel-meats-32/bacon.png" class="icon">
-        <p class="pixelify-sans-btt">About</p>
+            <p class="pixelify-sans-btt">About</p>
         <img src="../imgs/pixel-meats/pixel-meats-32/bacon.png" class="icon">
     </a>
+
+    
     <a href="../index.html" id="btt-sound" class="btt">
         <img src="../imgs/pixel-meats/pixel-meats-32/hamburger-patty.png" class="icon">
         <p class="pixelify-sans-btt">HOME</p>
@@ -72,35 +77,42 @@
         <h1 class="pixelify-sans-title">Quiz - P1</h1>
         </div>
         
-        <p class="p-hero">Somos estudantes do curso de Desenvolvimento de Sistemas, trabalhando no projeto de conclusão de curso (TCC). 
-            
-            <div class="progress-container">
+        <div class="Quiz">
 
-                <div class="progress-bar" id="progressBar"></div>
-            
-                <span class="progress-text" id="progressText">
-                    10%
-                </span>
-            
+            <h2 id="question">
+                Carregando pergunta...
+            </h2>
+        
+            <div id="answers">
+        
             </div>
+        
+            <p id="feedback"></p>
+        
+        </div>
+            
+        <div class="progress-container">
 
-            <div class="div-btt-quiz">
+            <div class="progress-bar" id="progressBar"></div>
+        
+            <span class="progress-text" id="progressText">
+                10%
+            </span>
+        
+        </div>
 
-                <button class="btt-quiz" onclick ="decreaseProgress()">
-                    Voltar
-                    
-                </button>
+        <div class="div-btt-quiz">
+
+            <button class="btt-quiz" onclick ="decreaseProgress()">
+                Voltar
                 
-                <button class="btt-quiz" onclick="increaseProgress()">
-                    Avançar
-                </button>
-            </div>
-    
-    
+            </button>
+            
+            <button class="btt-quiz" onclick="increaseProgress()">
+                Avançar
+            </button>
+        </div>    
     </div>
-
-
-    
 
 </section>
 
@@ -111,7 +123,7 @@
     <img src="/imgs/ballon-cat.gif" alt="cat gif" style="width:30px; height: 50px;">
 </button>
 </footer>
-<script src="quiz.js"></script>
+
 <!--
 Por que usar inline no <head>?
     
