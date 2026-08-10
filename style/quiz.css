@@ -1,0 +1,266 @@
+:root {
+    --bg-main: #0f0202;
+    --bg-secondary: #1a0505;
+    --red-main: #5a0f0f;
+    --red-strong: #8b1e1e;
+    --gold: #c9a14a;
+    --text: #f5e6c8;
+}
+    
+    /*Global background for the site*/
+    body { 
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        background: radial-gradient(circle at top, #2b0a0a, #0f0202);
+        color: var(--text);
+    }
+    .hero{
+        flex: 1;
+    }
+    
+    /* Global font family for all text elements */
+    .jersey-10-regular {
+      font-family: "Jersey 10", sans-serif;
+      font-style: normal;
+    }  
+    
+    
+    .pixelify-sans-400 {
+      font-family: "Pixelify Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 1.3rem;
+    }
+    
+    .pixelify-sans-title {
+      font-family: "Pixelify Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 2rem;
+    }
+    
+    .pixelify-sans-btt {
+      font-family: "Pixelify Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 1rem;
+    }
+    /*-----------End Global Styles-----------*/
+    
+    /* largura da barra */
+    
+
+    
+    @media (max-width: 600px) {
+            .container .btt:nth-child(n+4) {
+            display: none;
+        }
+    }
+    
+    /*btt - button of the container "item 1" "item 2" "..." "..."*/
+    .btt { 
+        color: var(--text);
+        background: #5a0f0f;
+        border: 2px solid var(--gold);
+        text-transform: uppercase;
+        font-size: 1rem;
+        box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 30px;
+        margin: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+        flex-grow: 2;
+        gap: 8px;
+        transition: all 0.5s ease;
+        letter-spacing: 1px;
+    }
+    
+    .btt img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+    
+    /*button animation (again)*/
+    
+    @media (min-width: 600px){
+        .btt:hover {
+            transform: translateY(-4px); /* sobe em vez de crescer */
+            background: #8b1e1e;
+            box-shadow:
+            0 0 5px #ff0000,
+            0 0 10px #ff0000,
+            0 0 20px #ff0000;        
+    }
+    }
+    
+    
+    .btt:active,
+    .btt-quiz:active {
+        transform: scale(0.95) translateY(2px);
+        box-shadow:
+            0 0 2px #ff0000,
+            0 0 5px #ff0000;
+    }
+    
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    /*----------Header End----------*/
+    
+
+    
+    .title {
+        letter-spacing: 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: relative;
+        font-size: 1.5rem;
+        padding: 0.5%;
+        border-radius: 10px;
+        border-radius: 29px 29px 0 0;
+        background: #5a0f0f;
+        border-bottom: 2px solid var(--gold);
+        color: var(--gold);
+        text-shadow: 0 0 5px rgba(255, 215, 0, 0.4);
+    }
+
+    .title-h1 {
+        font-size: 1.5rem;
+        font-family: "Pixelify Sans", sans-serif;
+        font-weight: 400;
+    }   
+
+    .hero h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 2rem;
+        padding: 1%;
+        color:var(--text);
+        text-shadow: black 1px 1px 2px;
+    }
+    
+    .hero p {
+        display: flex;
+        justify-content: center;
+        font-size: 1.2rem;
+        padding: 1%;
+        color: rgb(255, 255, 255);
+        text-shadow: black 1px 1px 2px;
+        letter-spacing: 2px;
+    }
+    
+    @media(max-width: 600px){
+        .hero h1 {
+            font-size: 1.5rem;
+        }
+    
+        .hero p {
+            font-size: 1rem;
+        }
+    
+            .hero-content {
+            grid-template-columns: 1fr;
+        }
+    
+        .hero-content .post:nth-child(n+3) {
+            display: none;
+        }
+    }
+    
+    /* Adjust the height as needed */
+    /*Create a space between sections*/
+    .space {
+        height: 1px; 
+    }
+    
+    .p-hero{
+        margin-left: 25px;
+        margin-bottom: 30px;
+        margin-right: 25px;
+            margin-top: 15px;
+    }
+
+
+
+
+    .div-btt-quiz{
+        display: flex;
+        justify-items: center;
+        justify-content: space-evenly;
+        
+    }
+
+    .btt-quiz {
+        margin-bottom: 15px;
+        color: var(--text);
+        background:#5a0f0f;
+        border: 2px solid var(--gold);
+        text-transform: uppercase;
+        font-size: 1rem;
+        box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+        
+        width: 150px;
+        height: 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .btt-quiz:hover {
+        transform: translatey(-4px);
+        background: #8b1e1e;
+        box-shadow:
+            0 0 5px #ff0000,
+            0 0 10px #ff0000,
+            0 0 20px #ff0000;  
+    }
+
+    .category-section{
+        flex-wrap: wrap;
+        flex-grow: 2;
+        justify-content: space-around;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px 20px;
+        border-radius: 29px;
+        margin: 20px;
+        gap: 20px;
+        border-bottom: 2px solid var(--gold);
+        border-top:  2px solid var(--gold);
+        color: var(--text);
+        letter-spacing: 1px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .Quiz-section{
+        display: flex;
+        flex-direction: column;
+        
+    
+        width:500 0px;
+        text-align: center;
+        justify-content: center;
+        border-radius: 29px;
+    }
+    
+    h3{
+        letter-spacing: 2.5px;
+        color: white;
+    }

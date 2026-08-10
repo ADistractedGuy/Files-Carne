@@ -1,0 +1,98 @@
+:root {
+    --bg-main: #0f0202;
+    --bg-secondary: #1a0505;
+    --red-main: #5a0f0f;
+    --red-strong: #8b1e1e;
+    --gold: #c9a14a;
+    --text: #f5e6c8;
+}
+
+    
+*{
+    margin: 0;
+    font-family: "Jersey 10", sans-serif;  
+}
+
+
+html{
+    scroll-behavior: smooth;
+    font-size: 20px; /* try 18–20px for Jersey 10 */   
+}
+
+.category-section{
+    flex-wrap: wrap;
+    flex-grow: 2;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--bg-main);
+    padding: 10px 20px;
+    border-radius: 29px;
+    margin: 10px;
+    gap: 20px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    border-top: 2px solid var(--gold);
+    color: var(--text);
+    letter-spacing: 1px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.Quiz-section{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    width: 500px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 29px;
+}
+
+.container{
+    background-color: blue;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 29px;
+    margin-top: 100px;
+}
+
+
+h1{
+    letter-spacing: 2px;
+
+}
+
+h3{
+    letter-spacing: 10px;
+}
+
+
+input{
+    padding: 5px;
+    margin: 3px;
+    border: var(--gold) 2px 3px 10px;
+    border-radius: 8px;
+    letter-spacing: 2px;
+    box-shadow: #8b1e1e solid 2px 10px 10px;
+}
+
+button{
+    padding: 4px 40px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin-top: 6px;
+    letter-spacing: 2px;
+}
+
+
+button:hover{
+    transform: translateY(-4px);
+    transition: all 0.3 ease;
+}

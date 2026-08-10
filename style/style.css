@@ -1,0 +1,547 @@
+    /*----------Global Styles----------*/
+:root {
+    --bg-main: #0f0202;
+    --bg-secondary: #1a0505;
+    --red-main: #5a0f0f;
+    --red-strong: #8b1e1e;
+    --gold: #c9a14a;
+    --text: #f5e6c8;
+}
+
+
+:root.white {
+    --headerclaro: oklch(85.1% 0.076 70.697);
+    --containerclaro:oklch(45.5% 0.188 13.697);
+    --bttclaro: oklch(70.8% 0.114 19.571);
+    --heroclaro: oklch(45.5% 0.188 13.697);
+    --titleclaro:oklch(85.1% 0.076 70.697);
+    --postclaro: oklch(70.8% 0.114 19.571) ;
+    --bodyclaro: oklch(30% 0.159 10.272);
+}
+
+
+* {
+    image-rendering: pixelated;
+    margin: 0;
+    padding: 0;
+    font-family: "Jersey 10", sans-serif;
+}
+
+/*Definir tamanho da fonte para o elemento html (global - De todo o site)*/
+html {
+    scroll-behavior: smooth;
+    font-size: 20px; /* try 18–20px for Jersey 10 */
+}
+
+
+/*
+/-------Responsive Design for Mobile Devices-------\    
+Use media queries to adjust font sizes and layout for smaller screens.
+Não mexer ou trocar qualquer coisa deste comentário, usar de referencia para o desenvolvimento de responsividade do site, principalmente para mobile.
+@media (max-width: 600px) {
+    html {
+        font-size: 18px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+}
+*/
+
+
+/*Global background for the site*/
+body {
+    font-size: 1rem;
+    background: radial-gradient(circle at top, #2b0a0a, #0f0202);
+    color: var(--text);
+
+    
+}
+.customizado{
+    cursor: url('/Assets/mouse icons/default-alt-dark.svg'), auto;
+}
+
+    /* Global font family for all text elements */
+.jersey-10-regular {
+    font-family: "Jersey 10", sans-serif;
+    font-style: normal;
+}  
+
+
+.pixelify-sans-400 {
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.3rem;
+}
+
+.pixelify-sans-title {
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+.pixelify-sans-btt {
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1rem;
+}
+/*-----------End Global Styles-----------*/
+
+/* largura da barra */
+
+/*----------Barra de Rolagem------------*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* fundo */
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+/* "pegador" (thumb) */
+::-webkit-scrollbar-thumb {
+    background: var(--red-strong);
+    border-radius: 20px;
+    border: 1px solid var(--gold);
+}
+
+/* hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--red-main);
+}
+
+/*--------fim da Barra de Rolagem---------*/
+
+
+
+/*----------Header----------*/
+
+/*Define tamanho, cor e espacaçamento ao background e aos elementos do header (Titulo)*/
+header{
+    background: linear-gradient(to right, #1a0505, #2b0a0a);
+    border-bottom: 2px solid var(--gold);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+    color: white;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    text-size-adjust: 100%;
+    font-size: 1.5rem;
+}
+
+/*definir tamanho para o elemento logo
+/*Defines position and size*/
+.logo{
+    position: sticky;
+    top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: contrast(1.1) saturate(1.6);
+}
+
+/*Defines spacing and layout for the logo area*/
+.logo-area{
+    z-index: 1000;
+    position: sticky;
+    top: 80px;
+    gap: 10px;
+    display: flex;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/*Responsible for the hover effect (Animation)*/
+.logo-area:hover{
+    scale: 1.10;
+    transition: 0.3s;
+}
+
+/*The all might "Container" responsible for responsive and btt layout*/
+.container {
+    -webkit-text-stroke: #0f0202 0.5px;
+    z-index: 1000;
+    position: sticky;
+    top: 10px;
+    margin: 12px;
+    margin-top: 21px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--red-strong);
+    border-radius: 10px;
+    justify-content: center;
+    margin-bottom: 4px;
+    overflow: visible;
+}
+
+
+
+@media (max-width: 600px) {
+        .container .btt:nth-child(n+4) {
+        display: none;
+    }
+}
+
+/*btt - button of the container "item 1" "item 2" "..." "..."*/
+.btt { 
+    color: var(--text);
+    background: #5a0f0f;
+    border: 2px solid var(--gold);
+    text-transform: uppercase;
+    font-size: 1rem;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    flex-grow: 2;
+    gap: 8px;
+    transition: all 0.5s ease;
+    letter-spacing: 1px;
+}
+
+.btt img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/*button animation (again)*/
+
+@media (min-width: 600px){
+    .btt:hover {
+        transform: translateY(-4px); /* sobe em vez de crescer */
+        background: #8b1e1e;
+        box-shadow:
+        0 0 5px #ff0000,
+        0 0 10px #ff0000,
+        0 0 20px #ff0000;        
+    }
+}
+
+
+.btt:active,
+.btt-quiz:active {
+    transform: scale(0.95) translateY(2px);
+    box-shadow:
+        0 0 2px #ff0000,
+        0 0 5px #ff0000;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+/*----------Header End----------*/
+
+
+
+/*-----------Hero Section-----------*/
+.hero {
+    background: #1a0505;
+    border-radius: 29px;
+    margin: 20px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+    border: 2px solid var(--gold);
+
+}   
+
+.title {
+    -webkit-text-stroke: #0f0202 1px;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: relative;
+    font-size: 1.5rem;
+    padding: 1%;
+    border-radius: 10px;
+    border-radius: 29px 29px 0 0;
+    background: #5a0f0f;
+    border-bottom: 2px solid var(--gold);
+    border-top: 2px solid var(--gold) ;
+    color: var(--gold);
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.4);
+}
+
+.hero h1 {
+    display: flex;
+    justify-content: center;
+
+    padding: 1%;
+    color:var(--text);
+    text-shadow: black 1px 1px 2px;
+    -webkit-text-stroke: #0f0202 0.7px;
+
+    filter: contrast(10.1) saturate(0.6);
+}
+
+.hero p {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1%;
+    color: rgb(255, 255, 255);
+    text-shadow: black 1px 1px 2px;
+    letter-spacing: 2px;
+}
+
+
+@media(200px <= width <= 800px){
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+    }
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content .post:nth-child(n+4){
+        display: none;
+    }
+    .post:hover{
+        display: none;
+    }
+}
+
+
+
+
+.hero-content {
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+}
+
+
+.post{
+    padding: 20px 10px;
+    border-radius: 10px;
+    background: #2b0a0a;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border: 2px solid #5a0f0f;
+
+    margin: 20px;
+    position: relative;
+    transition: 0.3s;
+}
+
+@media (min-width: 600px) {
+    .post h1{
+        font-size: 1.4rem;
+    }
+    
+}
+
+.post:hover {
+    transform: translateY(-5px) scale(1.03);
+    border-color: var(--gold);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+}
+
+.post:active {
+    transform: scale(0.95) translateY(2px);
+    box-shadow:
+        0 0 2px #ff0000,
+        0 0 5px #ff0000;
+}
+
+@media (max-width: 500px){
+    .post:hover{
+        display: none;
+    }
+}
+
+.img_post {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border-bottom:2 2px solid var(--gold);
+    filter: contrast(1.2) saturate(1.0);
+    border: solid var(--gold);
+    border-top: 10px;
+    border-left: 10px;
+    border-right: 10px; 
+}
+
+.img_icon{
+    width: 15%;
+    display: block;
+    margin: 0 auto;
+    filter: contrast(1.1) saturate(1.1);    
+    border: 1px solid #5a0f0f;
+}
+.btt-quiz {
+    color: var(--text);
+    background: #5a0f0f;
+    border: 2px solid var(--gold);
+    text-transform: uppercase;
+    font-size: 1rem;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 30px;
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btt-quiz:hover {
+    transform: translatey(-4px);
+    background: #8b1e1e;
+    box-shadow:
+        0 0 5px #ff0000,
+        0 0 10px #ff0000,
+        0 0 20px #ff0000;  
+}
+
+/* Adjust the height as needed */
+/*Create a space between sections*/
+.space {
+    height: 1px; 
+}
+
+/*--------------Category Section--------------*/
+.category {
+    flex-wrap: wrap;
+    flex-grow: 2;
+    justify-content: space-around;
+    display: flex;
+
+    background: var(--bg-main);
+    padding: 10px 20px;
+    border-radius: 29px;
+    margin: 10px;
+    gap: 20px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    border-top: 2px solid var(--gold);
+    color: var(--text);
+    letter-spacing: 1px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.Quiz {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #2b0a0a;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border: 2px solid #5a0f0f;
+    width: 500px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 29px;
+}
+
+@media (max-width: 600px) {
+    .Quiz {
+        width:90%;
+        background: none;
+        border: none;
+    }
+    .Quiz h2 {
+        font-size: 1.5rem;
+    }
+    .Quiz p {
+        font-size: 1rem;
+        }
+    .Quiz .btt-quiz {
+        width: 50%;
+    }
+
+    .btt-quiz:hover{
+        display: none ;
+    }
+
+}
+
+.btt:active,
+.btt-quiz:active {
+    transform: scale(0.95) translateY(2px);
+    box-shadow:
+        0 0 2px #ff0000,
+        0 0 5px #ff0000;
+}
+
+footer{
+    border-radius: 50px; 
+    padding: 2% ;
+    margin: 10px;
+    color: white;
+    background: #1a0505;
+    border-top: 2px solid var(--gold);
+    text-align: center;
+}
+
+.B-cat{
+    cursor: pointer;
+    background-color: turquoise;
+    border-radius: 10px;
+    margin-top: -100px;
+    margin-bottom: 5px;
+    }
+
+.B-cat:hover {
+background-color: aqua;
+    }
+
+.foot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ======== ABOUT.HTML ======== */
+
+.hero p {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1%;
+    color: rgb(255, 255, 255);
+    text-shadow: black 1px 1px 2px;
+    letter-spacing: 2px;
+}
+
+
+.p-hero{
+    margin-left: 25px;
+    margin-bottom: 30px;
+    margin-right: 25px;
+    margin-top: 15px;
+}
+
+/* ======== FIM - ABOUT.HTML ======== */
+
+
+/* ======== ADMIN.HTML ========*/
+/* ======== FIM - ADMIN.HTML ========*/
+
+
+/* ======== Quiz.HTML ========*/
+.progress-bar{
+    transition: width .5s ease;
+}
+/* ======== FIM - Quiz.HTML ========*/
