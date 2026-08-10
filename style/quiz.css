@@ -6,7 +6,6 @@
     --gold: #c9a14a;
     --text: #f5e6c8;
 }
-    
     /*Global background for the site*/
     body { 
         height: 100%;
@@ -26,7 +25,6 @@
       font-family: "Jersey 10", sans-serif;
       font-style: normal;
     }  
-    
     
     .pixelify-sans-400 {
       font-family: "Pixelify Sans", sans-serif;
@@ -54,7 +52,6 @@
     /*-----------End Global Styles-----------*/
     
     /* largura da barra */
-    
 
     
     @media (max-width: 600px) {
@@ -247,7 +244,7 @@
         margin-left: 10px;
         margin-right: 10px;
         margin-bottom: 10px;
-    }
+    }                   
     
     .Quiz-section{
         display: flex;
