@@ -30,7 +30,7 @@
     /*Definir tamanho da fonte para o elemento html (global - De todo o site)*/
     html {
         scroll-behavior: smooth;
-        font-size: 20px; /* try 18–20px for Jersey 10 */
+        font-size: 20px; /* keep btwn 18–20px for Jersey 10 */
     }
 
 .divisory{
