@@ -1,0 +1,55 @@
+/*corpo do titulo?*/
+.titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 3px;
+   
+}
+
+
+/*titulo do post*/
+.titulo h2{
+    font-weight: 200;
+    margin-left: 30px ;
+    margin-right: 30px ;
+}
+    
+/*tempo de leitura*/
+
+.titulo span {
+    align-self: flex-end;   /* Alinha especificamente  o tempo na lateral direita */
+    font-size: 0.9rem;
+    font-weight: 200;
+}
+
+
+h2{
+    margin: 10px;
+
+}
+
+h3{
+
+margin: 20px;
+font-weight: 200;
+align-items: center;
+letter-spacing: 1px;
+
+
+
+}
+
+.bold{font-weight: 500;
+letter-spacing: 4px;}
+
+
+
+
+
+
+
+
+
+
+
