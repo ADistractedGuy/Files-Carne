@@ -11,8 +11,8 @@
 /*titulo do post*/
 .titulo h2{
     font-weight: 200;
-    margin-left: 60px ;
-    margin-right: 60px ;
+    margin-left: 70px ;
+    margin-right: 70px ;
 }
     
 /*tempo de leitura*/
@@ -23,11 +23,21 @@
     font-weight: 200;
 }
 
+.conteudo{
+    margin-left: 220px;
+    margin-right: 220px;
+    
+}
+
 .texto{
     margin-right: 100px;
     margin-left: 100px;
     letter-spacing: 2px;
     font-weight: 200;
+    margin-bottom: 30px;
+    margin-top: 9px;
+    font-size: 1.0rem;
+    text-align: justify;
 }
 
 h2{
@@ -35,34 +45,54 @@ h2{
     margin-left: 50px;
     letter-spacing: 3px;
     font-weight: 500;
+    margin-top: 30px;
+    text-align: justify;
 }
 
 h3{
-margin-top:50px;
-margin-right: 50px;
+margin-top:20px;
+margin-right: 30px;
 margin-left: 50px;
 font-weight: 200;
 align-items: center;
 letter-spacing: 2px;
+text-align: justify;
+
 }
 
-.bold{font-weight: 500;
+.bold{
+font-weight: 500;
 letter-spacing: 4px;
 margin-left: 70px;
-margin-top: 30px;
+margin-top: 10px;
+font-size: 1.1rem;
 
 }
 
 span{
-    font-weight: 600;
+    font-weight: 300;
     letter-spacing: 2px;
     font-size: x-large;
 }
 
 
+h4{
+letter-spacing: 2px;
+font-weight: 300;
+margin-bottom: 5px;
+margin-top: 20px;
+
+text-align: justify;
+}
 
 
+li{
 
+margin-left: 70px;
+margin-top: 4px;
+font-weight: 200;
+font-size: 1.0rem;
+}
 
 
 
