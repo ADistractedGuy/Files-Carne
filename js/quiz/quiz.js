@@ -1,206 +1,206 @@
-// Quiz.js - Arquivo de Script do Quiz
-
-//Seção para salvar comandos utilizados com frequenci~
-
-//
-//você está dizendo:
-//Pegue a variável ez_questions.
-//Pegue o objeto na posição 0.
-//Pegue a propriedade question desse objeto
-//
-// console.log(ez_questions[0].question);
+let shuffledQuestions = [];
 
 
-//variaveis de controle do quiz
-// var - barra_progresso
-let progress = 0;
+// Elementos da página
+const questionElement = document.querySelector(".pergunta");
+const answerButtons = document.querySelectorAll(".btt-quiz");
 
 
-//sistema simples para funcionamento geral do quiz
+// Inicia o quiz
+function startQuiz() {
+
+    // Copia as perguntas
+    shuffledQuestions = [...questions];
+
+    // Embaralha as perguntas
+    shuffledQuestions.sort(() => Math.random() - 0.5);
+
+    // Reinicia o quiz
+    currentQuestion = 0;
+    resetScore();
+
+    // Mostra a primeira pergunta
+    showQuestion();
+}
 
 
+// Mostra a pergunta atual
+function showQuestion() {
 
-//Constantes controle do quiz
-// Nível 1 - Fácil
-const ez_questions = [
+    const question = shuffledQuestions[currentQuestion];
 
-    {
-        question: "Qual destes é um corte bovino?",
-    
-        wrong_answers: [
-        "Tilápia",
-        "Frango",
-        "Bacon"
-        ],
-    
-        correct_answers: [
-        "Picanha"
-        ]
-    },
-    
-    {
-        question: "Qual carne vem do porco?",
-    
-        wrong_answers: [
-            "Maminha",
-            "Peito de Frango",
-            "Salmão"
-        ],
-    
-        correct_answers: [
-        "Costela Suína"
-        ]
-    },
-    
-    {
-        question: "Qual carne é considerada branca?",
-    
-        wrong_answers: [
-        "Picanha",
-        "Contra-filé",
-        "Costela"
-        ],
-    
-        correct_answers: [
-        "Frango"
-        ]
-    }
-    
-    ];
-    
-// =======================
-// Nível 2
-const medium_questions = [
-    
-    {
-        question: "Qual destes cortes é retirado da parte traseira do boi?",
-    
-        wrong_answers: [
-            "Asa",
-            "Lombo suíno",
-            "Filé de tilápia"
-        ],
-    
-        correct_answers: [
-            "Maminha"
-        ]
-    },
-    
-    {
-        question: "Qual destes é um corte suíno?",
-    
-        wrong_answers: [
-            "Acém",
-            "Cupim",
-            "Peito de frango"
-        ],
-    
-        correct_answers: [
-            "Lombo"
-        ]
-    },
-    
-    {
-        question: "Qual destas carnes costuma ser utilizada no churrasco brasileiro?",
-    
-        wrong_answers: [
-            "Sardinha",
-            "Peito de frango",
-            "Bacalhau"
-        ],
-    
-        correct_answers: [
-            "Picanha"
-        ]
+    // Mostra a pergunta
+    questionElement.textContent = question.question;
 
-    }
-    
-];
-    
-    // =======================
-    
-    // Nível 3
-    const hard_questions = [
-    
-    {
-        question: "Qual corte bovino possui formato triangular e uma espessa capa de gordura?",
-    
-        wrong_answers: [
-            "Patinho",
-            "Acém",
-            "Lagarto"
-        ],
-    
-        correct_answers: [
-            "Picanha"
-        ]
-    },
-    
-    {
-        question: "Qual corte é tradicionalmente utilizado para preparar Ossobuco?",
-    
-        wrong_answers: [
-            "Picanha",
-            "Fraldinha",
-            "Filé mignon"
-        ],
-    
-        correct_answers: [
-            "Músculo"
-        ]
-    },
-    
-    {
-        question: "Qual destes cortes bovinos é conhecido pelo elevado marmoreio?",
-    
-        wrong_answers: [
-            "Coxão duro",
-            "Lagarto",
-            "Patinho"
-        ],
-    
-        correct_answers: [
-            "Ancho"
-        ]
-    }
-    
+
+    // Junta respostas erradas e corretas
+    const answers = [
+        ...question.wrong_answers,
+        ...question.correct_answers
     ];
 
 
+    // Embaralha as respostas
+    answers.sort(() => Math.random() - 0.5);
 
 
+    // Coloca as respostas nos botões
+    answerButtons.forEach((button, index) => {
+
+        const answer = answers[index];
+
+        button.innerHTML = `
+            <h3>
+                <span>(${String.fromCharCode(65 + index)})</span>
+                ${answer}
+            </h3>
+        `;
+
+        // Guarda a resposta
+        button.dataset.answer = answer;
+
+        // Remove classes anteriores
+        button.classList.remove("correct");
+        button.classList.remove("wrong");
+
+        // Habilita o botão
+        button.disabled = false;
+
+    });
 
 
-
-
-
-
-//Bara de Progesso - Define o quanto falta para o quiz acabar, e o quanto falta para o usuario passar de nivel - (O Nivel é apenas uma possiblidade).
-function increaseProgress() {
-
-    if (progress < 100) {
-
-        progress += 10;
-
-        document.getElementById("progressBar").style.width =
-        progress + "%";
-        
-        document.getElementById("progressText").textContent =
-            progress + "%";
-    } 
-    
+    // Atualiza progresso
+    updateProgress();
 }
-function decreaseProgress(){
-    if (progress <= 100  & progress >= 1){
-        
-        progress -= 10;
 
-        document.getElementById("progressBar").style.width = 
-        progress + "%";
-        
-        document.getElementById("progressText").textContent =
-        progress + "%";
+
+// Verifica a resposta
+function checkAnswer(event) {
+
+    const button = event.currentTarget;
+
+    const selectedAnswer = button.dataset.answer;
+
+    const question = shuffledQuestions[currentQuestion];
+
+
+    // Verifica se está correta
+    const correctAnswer =
+        question.correct_answers.includes(selectedAnswer);
+
+
+    // Desabilita todos os botões
+    answerButtons.forEach(button => {
+        button.disabled = true;
+    });
+
+
+    // Resposta correta
+    if (correctAnswer) {
+
+        button.classList.add("correct");
+
+        addScore();
+
     }
-    
-    
+
+    // Resposta errada
+    else {
+
+        button.classList.add("wrong");
+
+
+        // Encontra e destaca a resposta correta
+        answerButtons.forEach(button => {
+
+            if (
+                question.correct_answers.includes(
+                    button.dataset.answer
+                )
+            ) {
+
+                button.classList.add("correct");
+
+            }
+
+        });
+
+    }
+
+
+    // Aguarda 1 segundo
+    setTimeout(() => {
+
+        nextQuestion();
+
+    }, 1000);
+
 }
+
+
+// Próxima pergunta
+function nextQuestion() {
+
+    currentQuestion++;
+
+
+    if (currentQuestion < shuffledQuestions.length) {
+
+        showQuestion();
+
+    }
+
+    else {
+
+        showResult();
+
+    }
+
+}
+
+
+// Mostra resultado
+function showResult() {
+
+    const quizSection =
+        document.querySelector(".Quiz-section");
+
+
+    quizSection.innerHTML = `
+
+        <h2>Quiz finalizado!</h2>
+
+        <p>
+            Você acertou ${score} de ${questions.length} questões.
+        </p>
+
+        <button
+            class="btt-quiz"
+            onclick="restartQuiz()"
+        >
+            Jogar novamente
+        </button>
+
+    `;
+
+}
+
+
+// Reinicia o quiz
+function restartQuiz() {
+
+    location.reload();
+
+}
+
+
+// Eventos dos botões
+answerButtons.forEach(button => {
+
+    button.addEventListener("click", checkAnswer);
+
+});
+
+
+// Inicia o quiz
+startQuiz();

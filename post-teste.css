@@ -1,3 +1,1210 @@
+/* =========================================================
+   FILE&CARNE
+   ESTILO DOS POSTS
+========================================================= */
+
+
+/* =========================================================
+   VARIÁVEIS
+========================================================= */
+
+:root {
+
+    --preto: #111111;
+
+    --branco: #ffffff;
+
+    --fundo: #f4f1e8;
+
+    --vermelho: #b3261e;
+
+    --verde: #3f7d44;
+
+    --azul: #3d6fa3;
+
+    --cinza: #666666;
+
+    --cinza-claro: #e5e1d8;
+
+    --sombra-pixel: 8px 8px 0 var(--preto);
+
+}
+
+
+/* =========================================================
+   CONFIGURAÇÃO GERAL DO POST
+========================================================= */
+
+body {
+
+    background-color: var(--fundo);
+
+}
+
+
+.post {
+
+    width: min(1100px, 90%);
+
+    margin: 80px auto 120px;
+
+}
+
+
+/* =========================================================
+   CABEÇALHO DO POST
+========================================================= */
+
+.post-header {
+
+    max-width: 900px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+
+}
+
+
+.post-category {
+
+    display: inline-block;
+
+    margin-bottom: 25px;
+
+    font-family: "Press Start 2P", cursive;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 3px;
+
+}
+
+
+.post-title {
+
+    margin: 0;
+
+    font-family: "Jersey 10", sans-serif;
+
+    font-size: clamp(3.5rem, 8vw, 7rem);
+
+    font-weight: 400;
+
+    line-height: 0.9;
+
+    letter-spacing: 2px;
+
+}
+
+
+.post-subtitle {
+
+    max-width: 700px;
+
+    margin: 30px auto;
+
+    font-family: "Pixelify Sans", sans-serif;
+
+    font-size: 1.5rem;
+
+    line-height: 1.5;
+
+}
+
+
+.post-meta {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+}
+
+
+.post-meta span {
+
+    padding: 10px 16px;
+
+    border: 2px solid var(--preto);
+
+    background-color: var(--branco);
+
+    font-family: "Pixelify Sans", sans-serif;
+
+    font-size: 0.95rem;
+
+}
+
+
+/* =========================================================
+   IMAGEM PRINCIPAL
+========================================================= */
+
+.post-cover {
+
+    margin: 0 auto 80px;
+
+}
+
+
+.post-cover img {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 550px;
+
+    object-fit: cover;
+
+    border: 4px solid var(--preto);
+
+    box-shadow: var(--sombra-pixel);
+
+}
+
+
+.post-cover figcaption {
+
+    margin-top: 15px;
+
+    color: var(--cinza);
+
+    font-family: "Pixelify Sans", sans-serif;
+
+    font-size: 0.9rem;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   CONTEÚDO PRINCIPAL
+========================================================= */
+
+.post-section {
+
+    max-width: 780px;
+
+    margin: 90px auto;
+
+}
+
+
+.post-section h2 {
+
+    margin: 15px 0 30px;
+
+    font-family: "Jersey 10", sans-serif;
+
+    font-size: 3rem;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+}
+
+
+.post-section h3 {
+
+    margin-top: 50px;
+
+    margin-bottom: 15px;
+
+    font-family: "Pixelify Sans", sans-serif;
+
+    font-size: 1.5rem;
+
+}
+
+
+.post-section h4 {
+
+    margin-top: 35px;
+
+    margin-bottom: 10px;
+
+    font-family: "Pixelify Sans", sans-serif;
+
+    font-size: 1.15rem;
+
+    font-weight: 700;
+
+}
+
+
+.post-section p {
+
+    margin: 20px 0;
+
+    font-family: "Pixelify Sans", sans-serif;
+
+    font-size: 1.15rem;
+
+    line-height: 1.9;
+
+}
+
+
+.post-section li {
+
+    margin: 10px 0;
+
+    font-family: "Pixelify Sans", sans-serif;
+
+    font-size: 1.1rem;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   INTRODUÇÃO
+========================================================= */
+
+.introduction {
+
+    margin-top: 40px;
+
+}
+
+
+.introduction .lead {
+
+    font-size: 1.4rem;
+
+    font-weight: 500;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   NÚMERO DAS SEÇÕES
+========================================================= */
+
+.section-number {
+
+    display: block;
+
+    font-family: "Press Start 2P", cursive;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 2px;
+
+    color: var(--vermelho);
+
+}
+
+
+/* =========================================================
+   DESTAQUE
+========================================================= */
+
+.highlight {
+
+    max-width: 850px;
+
+    margin: 80px auto;
+
+    padding: 40px;
+
+    border: 3px solid var(--preto);
+
+    background-color: var(--branco);
+
+    box-shadow: var(--sombra-pixel);
+
+}
+
+
+.highlight-label {
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-family: "Press Start 2P", cursive;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 2px;
+
+}
+
+
+.highlight h2 {
+
+    margin: 0 0 20px;
+
+    font-family: "Jersey 10", sans-serif;
+
+    font-size: 2.8rem;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+}
+
+
+.highlight p {
+
+    margin: 0;
+
+    font-family: "Pixelify Sans", sans-serif;
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   ÍNDICE
+========================================================= */
+
+.post-index {
+
+    max-width: 780px;
+
+    margin: 80px auto;
+
+    padding: 30px;
+
+    border-top: 3px solid var(--preto);
+
+    border-bottom: 3px solid var(--preto);
+
+}
+
+
+.post-index h2 {
+
+    margin-top: 0;
+
+    font-family: "Jersey 10", sans-serif;
+
+    font-size: 2.5rem;
+
+    font-weight: 400;
+
+}
+
+
+.post-index ol {
+
+    padding-left: 25px;
+
+}
+
+
+.post-index li {
+
+    margin: 12px 0;
+
+}
+
+
+.post-index a {
+
+    color: var(--preto);
+
+    font-family: "Pixelify Sans", sans-serif;
+
+    font-size: 1.1rem;
+
+    text-decoration: none;
+
+}
+
+
+.post-index a:hover {
+
+    color: var(--vermelho);
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================================
+   BLOCKQUOTE
+========================================================= */
+
+blockquote {
+
+    margin: 40px 0;
+
+    padding: 25px 30px;
+
+    border-left: 7px solid var(--vermelho);
+
+    background-color: var(--cinza-claro);
+
+    font-family: "Pixelify Sans", sans-serif;
+
+    font-size: 1.2rem;
+
+    font-style: italic;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   GRID TÉCNICO
+========================================================= */
+
+.technical-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    margin-top: 40px;
+
+}
+
+
+.technical-card {
+
+    padding: 30px;
+
+    border: 3px solid var(--preto);
+
+    background-color: var(--branco);
+
+    box-shadow: 6px 6px 0 var(--preto);
+
+}
+
+
+.technical-card h3 {
+
+    margin: 0 0 15px;
+
+    font-family: "Jersey 10", sans-serif;
+
+    font-size: 2rem;
+
+    font-weight: 400;
+
+}
+
+
+.technical-card p {
+
+    margin: 0;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   CATEGORIAS DE CARNE
+========================================================= */
+
+.meat-category {
+
+    position: relative;
+
+    margin: 70px 0;
+
+    padding: 40px;
+
+    border: 3px solid var(--preto);
+
+    background-color: var(--branco);
+
+}
+
+
+.meat-category h3 {
+
+    margin: 0 0 35px;
+
+    font-family: "Jersey 10", sans-serif;
+
+    font-size: 3rem;
+
+    font-weight: 400;
+
+}
+
+
+/* Número do card */
+
+.category-number {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 25px;
+
+    font-family: "Press Start 2P", cursive;
+
+    font-size: 0.65rem;
+
+}
+
+
+/* =========================================================
+   RESUMO DA CARNE
+========================================================= */
+
+.meat-summary {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 40px;
+
+}
+
+
+.meat-summary div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    padding: 15px;
+
+    border: 2px solid var(--preto);
+
+    background-color: var(--fundo);
+
+}
+
+
+.meat-summary strong {
+
+    font-family: "Press Start 2P", cursive;
+
+    font-size: 0.55rem;
+
+    line-height: 1.5;
+
+}
+
+
+.meat-summary span {
+
+    font-family: "Pixelify Sans", sans-serif;
+
+    font-size: 1rem;
+
+}
+
+
+/* =========================================================
+   CORES DAS CATEGORIAS
+========================================================= */
+
+.primeira {
+
+    border-top: 10px solid var(--vermelho);
+
+}
+
+
+.segunda {
+
+    border-top: 10px solid var(--verde);
+
+}
+
+
+.terceira {
+
+    border-top: 10px solid var(--azul);
+
+}
+
+
+/* =========================================================
+   LISTAS
+========================================================= */
+
+.meat-category ul {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 8px 30px;
+
+    padding-left: 25px;
+
+}
+
+
+.meat-category li {
+
+    margin: 0;
+
+}
+
+
+/* =========================================================
+   TABELA DE PREPARO
+========================================================= */
+
+.preparation-table {
+
+    margin-top: 40px;
+
+    border: 3px solid var(--preto);
+
+    box-shadow: 6px 6px 0 var(--preto);
+
+}
+
+
+.table-header,
+
+.table-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+}
+
+
+.table-header {
+
+    background-color: var(--preto);
+
+    color: var(--branco);
+
+    font-family: "Press Start 2P", cursive;
+
+    font-size: 0.6rem;
+
+}
+
+
+.table-header span,
+
+.table-row span {
+
+    padding: 18px;
+
+}
+
+
+.table-row {
+
+    border-top: 2px solid var(--preto);
+
+    font-family: "Pixelify Sans", sans-serif;
+
+}
+
+
+.table-row span:first-child {
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   EXPERIÊNCIA
+========================================================= */
+
+.experience {
+
+    position: relative;
+
+}
+
+
+.experience h3 {
+
+    margin-top: 50px;
+
+}
+
+
+.experience ul {
+
+    padding-left: 25px;
+
+}
+
+
+/* =========================================================
+   DICA FILE&CARNE
+========================================================= */
+
+.tip {
+
+    margin: 50px 0;
+
+    padding: 35px;
+
+    border: 3px solid var(--preto);
+
+    background-color: #fff4d6;
+
+    box-shadow: var(--sombra-pixel);
+
+}
+
+
+.tip span {
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-family: "Press Start 2P", cursive;
+
+    font-size: 0.65rem;
+
+}
+
+
+.tip p {
+
+    margin: 0;
+
+    font-family: "Jersey 10", sans-serif;
+
+    font-size: 2rem;
+
+    line-height: 1.2;
+
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq details {
+
+    margin: 15px 0;
+
+    border: 3px solid var(--preto);
+
+    background-color: var(--branco);
+
+}
+
+
+.faq summary {
+
+    padding: 20px;
+
+    cursor: pointer;
+
+    font-family: "Pixelify Sans", sans-serif;
+
+    font-size: 1.15rem;
+
+    font-weight: 700;
+
+    list-style-position: inside;
+
+}
+
+
+.faq details p {
+
+    margin: 0;
+
+    padding: 0 25px 25px;
+
+}
+
+
+/* =========================================================
+   CONCLUSÃO
+========================================================= */
+
+.post-conclusion {
+
+    max-width: 850px;
+
+    margin: 100px auto;
+
+    padding: 50px;
+
+    border: 3px solid var(--preto);
+
+    background-color: var(--branco);
+
+    text-align: center;
+
+    box-shadow: var(--sombra-pixel);
+
+}
+
+
+.post-conclusion > span {
+
+    font-family: "Press Start 2P", cursive;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 2px;
+
+}
+
+
+.post-conclusion h2 {
+
+    margin: 25px 0;
+
+    font-family: "Jersey 10", sans-serif;
+
+    font-size: 3.5rem;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+}
+
+
+.post-conclusion p {
+
+    max-width: 650px;
+
+    margin: 20px auto;
+
+    font-family: "Pixelify Sans", sans-serif;
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   FONTES
+========================================================= */
+
+.post-sources {
+
+    max-width: 780px;
+
+    margin: 100px auto 0;
+
+    padding-top: 40px;
+
+    border-top: 3px solid var(--preto);
+
+}
+
+
+.post-sources h2 {
+
+    font-family: "Jersey 10", sans-serif;
+
+    font-size: 2.5rem;
+
+    font-weight: 400;
+
+}
+
+
+.post-sources li {
+
+    margin: 12px 0;
+
+    font-family: "Pixelify Sans", sans-serif;
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 800px) {
+
+
+    .post {
+
+        width: min(92%, 700px);
+
+        margin-top: 50px;
+
+    }
+
+
+    .post-title {
+
+        font-size: clamp(3rem, 14vw, 5rem);
+
+    }
+
+
+    .technical-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .meat-summary {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .meat-category {
+
+        padding: 25px;
+
+    }
+
+
+    .meat-category h3 {
+
+        font-size: 2.5rem;
+
+    }
+
+
+    .meat-category ul {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .highlight {
+
+        padding: 30px;
+
+    }
+
+
+    .post-conclusion {
+
+        padding: 35px 25px;
+
+    }
+
+
+}
+
+
+@media (max-width: 500px) {
+
+
+    .post {
+
+        width: 92%;
+
+    }
+
+
+    .post-header {
+
+        margin-bottom: 50px;
+
+    }
+
+
+    .post-category {
+
+        font-size: 0.55rem;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .post-title {
+
+        font-size: 3.5rem;
+
+    }
+
+
+    .post-subtitle {
+
+        font-size: 1.2rem;
+
+    }
+
+
+    .post-meta {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .post-meta span {
+
+        text-align: center;
+
+    }
+
+
+    .post-section {
+
+        margin: 65px auto;
+
+    }
+
+
+    .post-section h2 {
+
+        font-size: 2.5rem;
+
+    }
+
+
+    .post-section p {
+
+        font-size: 1.05rem;
+
+        line-height: 1.8;
+
+    }
+
+
+    .highlight {
+
+        margin: 60px auto;
+
+        padding: 25px;
+
+        box-shadow: 6px 6px 0 var(--preto);
+
+    }
+
+
+    .highlight h2 {
+
+        font-size: 2.2rem;
+
+    }
+
+
+    .technical-card {
+
+        padding: 25px;
+
+    }
+
+
+    .meat-category {
+
+        margin: 50px 0;
+
+        padding: 22px;
+
+    }
+
+
+    .meat-category h3 {
+
+        font-size: 2.2rem;
+
+    }
+
+
+    .category-number {
+
+        font-size: 0.5rem;
+
+        right: 15px;
+
+    }
+
+
+    .table-header,
+
+    .table-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .table-header span + span,
+
+    .table-row span + span {
+
+        border-top: 1px solid var(--preto);
+
+    }
+
+
+    .tip {
+
+        padding: 25px;
+
+        box-shadow: 6px 6px 0 var(--preto);
+
+    }
+
+
+    .tip p {
+
+        font-size: 1.7rem;
+
+    }
+
+
+    .post-conclusion {
+
+        margin: 70px auto;
+
+        padding: 30px 20px;
+
+    }
+
+
+    .post-conclusion h2 {
+
+        font-size: 2.7rem;
+
+    }
+
+}
+
+
+
 /*corpo do titulo?*/
 .titulo {
     display: flex;
@@ -10,6 +1217,12 @@
 
 /*titulo do post*/
 .titulo h2{
+    font-weight: 200;
+    margin-left: 60px ;
+    margin-right: 60px ;
+}
+
+.titulo h1{
     font-weight: 200;
     margin-left: 60px ;
     margin-right: 60px ;
