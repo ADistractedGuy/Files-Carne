@@ -391,3 +391,105 @@ NUMEROS DAS QUESTÕES
 #question-number {
     font-size: 1.5rem;
 }
+
+
+/* =========================
+   ÁREA DA DICA
+========================= */
+
+.quiz-hint {
+
+    width: 85%;
+
+    margin: 25px auto 10px auto;
+
+}
+
+
+/* Botão */
+
+.hint-button {
+
+    display: block;
+
+    margin: 0 auto;
+
+    padding: 10px 20px;
+
+    background-color: transparent;
+
+    color: var(--gold);
+
+    border: 2px solid var(--gold);
+
+    border-radius: 6px;
+
+    font-family: "Pixelify Sans", sans-serif;
+
+    font-size: 1.1rem;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+.hint-button:hover {
+
+    background-color: var(--gold);
+
+    color: var(--bg-main);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* Caixa da dica */
+
+.hint-box {
+
+    margin-top: 15px;
+
+    padding: 18px 20px;
+
+    background-color: var(--bg-secondary);
+
+    border-left: 5px solid var(--gold);
+
+    border-radius: 10px;
+
+}
+
+
+/* Título */
+
+.hint-title {
+
+    margin-bottom: 10px;
+
+    color: var(--gold);
+
+    font-family: "Press Start 2P", sans-serif;
+
+    font-size: 0.8rem;
+
+}
+
+
+/* Texto */
+
+.hint-box p {
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-family: "Pixelify Sans", sans-serif;
+
+    font-size: 1.1rem;
+
+    line-height: 1.5;
+
+}

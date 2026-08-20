@@ -28,8 +28,10 @@
             correct_answers: [
                 "Picanha"
             ],
-        
-            explanation: "A picanha é um corte retirado da parte traseira do boi, muito apreciado em churrascos."
+            
+            explanation: "A picanha é um corte retirado da parte traseira do boi, muito apreciado em churrascos.",
+            
+            hint: "É um corte localizado na parte traseira do boi e muito conhecido por sua capa de gordura, sendo bastante utilizado em churrascos.",
         },
         
         {
@@ -49,7 +51,11 @@
                 "Costela Suína"
             ],
         
-            explanation: "A costela suína é um corte proveniente do porco, conhecido pelo sabor marcante e pela maciez."
+            explanation: "A costela suína é um corte proveniente do porco, conhecido pelo sabor marcante e pela maciez.",
+
+            hint: "Observe a origem dos animais: uma das opções é um corte obtido de um animal conhecido pela produção de carne suína.",
+            
+
         },
         
         {
@@ -69,7 +75,9 @@
                 "Frango"
             ],
         
-            explanation: "O frango é classificado como carne branca por possuir menor concentração de mioglobina em comparação às carnes bovinas."
+            explanation: "O frango é classificado como carne branca por possuir menor concentração de mioglobina em comparação às carnes bovinas.",
+
+            hint: "Carnes brancas geralmente apresentam menor concentração de mioglobina. Entre as opções, procure pela carne de ave."
         },
         
         {
@@ -89,7 +97,10 @@
                 "Maminha"
             ],
         
-            explanation: "A maminha é um corte bovino localizado na parte traseira do animal, conhecido pela maciez."
+            explanation: "A maminha é um corte bovino localizado na parte traseira do animal, conhecido pela maciez.",
+
+            hint: "É um corte bovino localizado próximo à região traseira do animal e conhecido por sua maciez."
+
         },
         
         {
@@ -109,7 +120,9 @@
                 "Lombo"
             ],
         
-            explanation: "O lombo é um dos principais cortes suínos e se destaca por ser uma carne magra e versátil."
+            explanation: "O lombo é um dos principais cortes suínos e se destaca por ser uma carne magra e versátil.",
+            
+            hint: "É um corte asociado a arne suína, geralmente considerado relativamente bastante versátil na cozinha.  "
         },
         
         {
@@ -129,7 +142,9 @@
                 "Picanha"
             ],
         
-            explanation: "A picanha é um dos cortes mais tradicionais do churrasco brasileiro devido ao seu sabor e à capa de gordura."
+            explanation: "A picanha é um dos cortes mais tradicionais do churrasco brasileiro devido ao seu sabor e à capa de gordura.",
+
+            hint: "Um dos cortes mais tradiionais brasileiros e é conhecido por sua capa de gordura."
         },
         
         {
@@ -149,7 +164,9 @@
                 "Picanha"
             ],
         
-            explanation: "A picanha possui formato triangular e uma característica capa de gordura, responsável por parte de seu sabor."
+            explanation: "A picanha possui formato triangular e uma característica capa de gordura, responsável por parte de seu sabor.",
+
+            hint: "Seu formato ajuda a identificá-lo, tambe´m possui uma camada de gordura na parte externa."
         },
         
         {
@@ -169,7 +186,9 @@
                 "Músculo"
             ],
         
-            explanation: "O ossobuco é preparado com o músculo bovino cortado em rodelas, preservando o osso com o tutano."
+            explanation: "O ossobuco é preparado com o músculo bovino cortado em rodelas, preservando o osso com o tutano.",
+
+            hint: "O prato é preparado com um corte que contém um osso central com tutano que exige cozimento prolongado para ficar macio."
         },
         
         {
@@ -189,7 +208,9 @@
                 "Ancho"
             ],
         
-            explanation: "O ancho apresenta elevado marmoreio, ou seja, gordura entremeada nas fibras, o que proporciona mais sabor e suculência."
+            explanation: "O ancho apresenta elevado marmoreio, ou seja, gordura entremeada nas fibras, o que proporciona mais sabor e suculência.",
+
+            hint:"Marmoreio é gordura distribuida entre as fibras de carne. Procure pelo corte conhecido por apresentar bastante características."
         },
 
         {
@@ -209,7 +230,9 @@
                 "Peito"
             ],
         
-            explanation: "O peito bovino possui fibras longas e bastante tecido conjuntivo, tornando-se ideal para cozimentos lentos e preparos de carne desfiada."
+            explanation: "O peito bovino possui fibras longas e bastante tecido conjuntivo, tornando-se ideal para cozimentos lentos e preparos de carne desfiada.",
+
+            hint: "É um corte com bastante tecido conjuntivo e fibras longas características que fazem com que ele se beneficie de cozimentos lentos e prolongados"
         }
         
         ];

@@ -1,15 +1,89 @@
 let shuffledQuestions = [];
 
 
-// Elementos da página
-const questionElement = document.querySelector(".pergunta");
-const answerButtons = document.querySelectorAll(".btt-quiz");
+// ==============================
+// ELEMENTOS DA PÁGINA
+// ==============================
+
+const questionElement =
+    document.querySelector(".pergunta");
+
+const answerButtons =
+    document.querySelectorAll(".btt-quiz");
 
 const questionNumberElement =
     document.querySelector("#question-number");
 
 const totalQuestionsElement =
     document.querySelector("#total-questions");
+
+const hintButton =
+    document.querySelector("#hint-button");
+
+const hintBox =
+    document.querySelector("#hint-box");
+
+const hintText =
+    document.querySelector("#hint-text");
+
+
+
+    function showHint() {
+
+        const question =
+            shuffledQuestions[currentQuestion];
+    
+    
+        // Verifica se a pergunta possui uma dica
+    
+        if (!question.hint) {
+    
+            hintText.textContent =
+                "Não há uma dica disponível para esta questão.";
+    
+        }
+    
+        else {
+    
+            hintText.textContent =
+                question.hint;
+    
+        }
+    
+    
+        hintBox.hidden = false;
+    
+        hintButton.textContent =
+            "💡 Esconder dica";
+    
+    }
+
+
+
+
+    function toggleHint() {
+
+        if (hintBox.hidden) {
+    
+            showHint();
+    
+        }
+    
+        else {
+    
+            hintBox.hidden = true;
+    
+            hintButton.textContent =
+                "💡 Mostrar dica";
+    
+        }
+    
+    }
+
+    hintButton.addEventListener(
+        "click",
+        toggleHint
+    );
 
 
 // Inicia o quiz
@@ -33,7 +107,16 @@ function startQuiz() {
 // Mostra a pergunta atual
 function showQuestion() {
 
-    const question = shuffledQuestions[currentQuestion];
+    const question = 
+        shuffledQuestions[currentQuestion];
+
+
+    // Reseta a dica
+    hintBox.hidden = true;
+
+    hintButton.textContent =
+        "💡 Mostrar dica";
+
 
     // Mostra a pergunta
     questionElement.textContent = question.question;
