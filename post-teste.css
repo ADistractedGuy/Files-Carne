@@ -7,6 +7,108 @@
     --text: white;
     --destaque: #f5e6c8;
 }
+
+.post-sumario {
+    width: min(900px, 90%);
+
+    margin: 40px auto;
+
+    padding: 25px 30px;
+
+    background: var(--bg-secondary);
+
+    border: 1px solid var(--red-main);
+
+    border-radius: 12px;
+}
+
+
+.sumario-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+.sumario-header span {
+    font-size: 1.5rem;
+}
+
+
+.sumario-header h2 {
+    margin: 0;
+
+    color: var(--destaque);
+
+    font-size: 2.4rem;
+
+    text-align: center;
+}
+
+
+.sumario-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px 30px;
+
+    padding: 0;
+
+    margin: 0;
+
+    list-style: none;
+}
+
+
+.sumario-list li {
+    margin: 0;
+}
+
+
+.sumario-list a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 12px;
+
+    color: var(--destaque);
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.sumario-list a:hover {
+    background-color: var(--red-main);
+
+    transform: translateX(5px);
+}
+
+
+.numero {
+    min-width: 30px;
+
+    color: var(--gold);
+
+    font-family: "Press Start 2P", sans-serif;
+
+    font-size: 0.65rem;
+}
   
 .divisoria{
     margin-left: 0;
@@ -158,10 +260,10 @@ h4{
 
 
 li{
-margin-left: 70px;
-margin-top: 4px;
-font-weight: 200;
-font-size: 1.0rem;
+    margin-left: 70px;
+    margin-top: 4px;
+    font-weight: 200;
+    font-size: 1.0rem;
 }
 
 .destaque{
@@ -170,4 +272,80 @@ font-size: 1.0rem;
 
 .destaque-2{
 color: var(--gold);
+}
+
+
+.files-dica {
+    margin: 60px 50px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        var(--bg-secondary),
+        var(--bg-main)
+    );
+
+    border: 1px solid var(--gold);
+
+    border-radius: 15px;
+}
+
+
+.files-dica h2 {
+    margin-left: 0;
+    margin-right: 0;
+
+    text-align: center;
+}
+
+
+.files-dica p {
+    max-width: 800px;
+
+    margin: 15px auto;
+
+    line-height: 1.7;
+}
+
+
+
+.faq {
+    margin: 30px 70px;
+    
+}
+
+
+.faq-item {
+    
+    margin-bottom: 20px;
+
+    padding: 20px;
+
+    background: var(--bg-secondary);
+
+    border-radius: 8px;
+
+    border: 2px solid var(--gold);
+
+
+    border: 1px solid #2b1010;
+}
+
+
+.faq-item h3 {
+    margin: 0 0 15px 0;
+
+    color: var(--destaque);
+
+    font-size: 1.1rem;
+}
+
+
+.faq-item p {
+    margin: 0;
+
+    line-height: 1.7;
 }

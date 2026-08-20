@@ -18,10 +18,13 @@ function getScore() {
 
 }
 
+
+// Reseta a pontuação
 function resetScore() {
+
     score = 0;
+
 }
-    
 
 
 // Atualiza a barra de progresso
@@ -38,13 +41,5 @@ function updateProgress() {
     const progress = ((currentQuestion + 1) / totalQuestions) * 100;
 
     progressBar.style.width = progress + "%";
-
-}
-
-
-// Reseta a pontuação
-function resetScore() {
-
-    score = 0;
 
 }
