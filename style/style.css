@@ -1,7 +1,7 @@
     /*----------Global Styles----------*/
 :root {
     --bg-main: #0f0202;
-    --bg-secondary: #1a0505;
+    --bg-secondary:     #d80000;
     --red-main: #5a0f0f;
     --red-strong: #8b1e1e;
     --gold: #c9a14a;
@@ -53,7 +53,7 @@ Não mexer ou trocar qualquer coisa deste comentário, usar de referencia para o
 /*Global background for the site*/
 body {
     font-size: 1rem;
-    background: radial-gradient(circle at top, #2b0a0a, #0f0202);
+    background: radial-gradient(circle at top, #290909, #3b0505);
     color: var(--text);
 
     
@@ -168,19 +168,26 @@ header{
 /*The all might "Container" responsible for responsive and btt layout*/
 .container {
     -webkit-text-stroke: #0f0202 0.5px;
+
     z-index: 1000;
     position: sticky;
     top: 10px;
     margin: 12px;
     margin-top: 21px;
+    margin-left: 22px;
+    margin-right: 22px;
+    margin-bottom: 4px;
+
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+
     background-color: var(--red-strong);
     border-radius: 10px;
+    
     justify-content: center;
-    margin-bottom: 4px;
     overflow: visible;
+
 }
 
 

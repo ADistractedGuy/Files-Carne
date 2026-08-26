@@ -402,3 +402,98 @@ justify-content: center;
 .hero{
     margin-bottom: 40px;
 }
+
+
+/*======Details======*/
+details h3{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    position-area: top center;
+
+}
+
+
+
+
+/* Light styling for presentation */
+details {
+
+  border-block-end: 1px solid #000;
+  margin-block: .5rem;
+  padding-block: .5rem;
+  
+
+}
+
+summary p{
+    position: relative;
+    position-area: top center
+     ;
+}
+
+summary {
+  /* Pin the custom marker to the container */
+  position: relative;
+  /* Register summary as an anchor element */
+  anchor-name: --summary;
+
+  justify-content: center;
+  
+  &::marker {
+    content: "";
+  }
+  
+  &::before,
+  &::after {
+    /* Custom marker dimensions */
+    content: "";
+    border-block-start: 3px solid orangered;
+    height: 0;
+    width: 1rem;
+    
+    /* Positions the lines */
+    inset-block-start: 50%;
+    inset-inline-end: 0;
+    
+    /* Anchor the shape to the summary */
+    position: absolute;
+    position-anchor: --summary;
+    position-area: top end;
+    justify-content: center;
+    margin-right: 100px;
+    background-color: #8b1e1e;
+
+    }
+  
+  /* Rotate just the ::after line to create a "+"" shape */
+  &::after {
+    transform: rotate(90deg);
+    transform-origin: 50%;
+  }
+}
+
+/* Rotate the line when open */
+details[open] summary::after {
+  transform: rotate(0deg);
+}
+
+details[open] p {
+    animation: animateDown 0.2s linear forwards;
+  }
+  
+  @keyframes animateDown {
+    0% {
+      opacity: 0;
+      transform: translatey(-15px);
+      transition: all 1s ease;
+    }
+    100% {
+      opacity: 1;
+      transform: translatey(0);
+      transition: all 0.5s ease;
+    }
+  }
+
+
+
