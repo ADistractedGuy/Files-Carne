@@ -1,20 +1,20 @@
 
-media: 
-    - name: post_imgs
-      label: Imagens dos artigos
-      input: Assets/imgs/content/posts
-      output: Assets/imgs/content/posts
-      categories: [image]
-      extensions: [jpg, jpeg, png, webp, gif]
-      rename: safe
+media:
+  - name: post_images
+    label: Imagens dos artigos
+    input: Assets/imgs/posts
+    output: /Assets/imgs/posts
+    categories: [image]
+    extensions: [jpg, jpeg, png, webp, gif]
+    rename: safe
 
 content:
-    - name: posts
-      label: Publicações
-      type: collection
-      path: content/posts
-      format: yaml-frontmatter
-      filename: "{primary}.md"
+  - name: posts
+    label: Publicações
+    type: collection
+    path: content/posts
+    format: yaml-frontmatter
+    filename: "{primary}.md"
 
     view:
       primary: title
@@ -73,6 +73,4 @@ content:
       - name: body
         label: Conteúdo completo
         type: rich-text
-        required: true       
-
-
+        required: true
