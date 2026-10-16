@@ -9,12 +9,12 @@ media:
       rename: safe
 
 content:
-  - name: posts
-    label: Publicações
-    type: collection
-    path: content/posts
-    format: yaml-frontmatter
-    filename: "{primary}.md"
+    - name: posts
+      label: Publicações
+      type: collection
+      path: content/posts
+      format: yaml-frontmatter
+      filename: "{primary}.md"
 
     view:
       primary: title
