@@ -1,76 +1,18 @@
 
-media:
-  - name: post_images
-    label: Imagens dos artigos
-    input: Assets/imgs/posts
-    output: /Assets/imgs/posts
-    categories: [image]
-    extensions: [jpg, jpeg, png, webp, gif]
-    rename: safe
+media: media
 
 content:
   - name: posts
     label: Publicações
     type: collection
     path: content/posts
-    format: yaml-frontmatter
-    filename: "{primary}.md"
-
-    view:
-      primary: title
-      fields: [title, date, category]
-      sort: date
-      order: desc
-
     fields:
       - name: title
-        label: Título do artigo
+        label: Título
         type: string
         required: true
-
-      - name: description
-        label: Resumo
-        type: text
-        required: true
-
-      - name: date
-        label: Data de publicação
-        type: date
-        required: true
-
-      - name: category
-        label: Categoria
-        type: select
-        required: true
-        options:
-          values:
-            - label: Cortes de carne
-              value: cortes
-            - label: Qualidade
-              value: qualidade
-            - label: Armazenamento
-              value: armazenamento
-            - label: Preparo
-              value: preparo
-            - label: Curiosidades
-              value: curiosidades
-
-      - name: cover
-        label: Imagem de capa
-        type: image
-        required: true
-
-      - name: author
-        label: Autor
-        type: string
-        default: "Equipe Files&Carne"
-
-      - name: tags
-        label: Tags
-        type: string
-        list: true
 
       - name: body
-        label: Conteúdo completo
+        label: Conteúdo
         type: rich-text
         required: true
