@@ -56,10 +56,18 @@ body {
     background: radial-gradient(circle at top, #290909, #3b0505);
     color: var(--text);
 
-    
+    /* Cursor normal */
+    cursor: url("../Assets/mouse icons/default-alt-dark.svg") 0 0, auto;
 }
-.customizado{
-    cursor: url('/Assets/mouse icons/default-alt-dark.svg'), auto;
+
+/* Cursor para elementos clicáveis */
+img,
+a,
+button,
+[role="button"]
+[role="link"]
+{
+    cursor: url("../Assets/mouse icons/pointer-dark.svg") 0 0, pointer;
 }
 
     /* Global font family for all text elements */
@@ -167,6 +175,29 @@ header{
 
 /*The all might "Container" responsible for responsive and btt layout*/
 .container {
+    -webkit-text-stroke: #0f0202 0.5px;
+
+    z-index: 1000;
+    position: sticky;
+    top: 10px;
+    margin: 12px;
+    margin-top: 21px;
+    margin-left: 22px;
+    margin-right: 22px;
+    margin-bottom: 4px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    background-color: var(--red-strong);
+    border-radius: 10px;
+    
+    justify-content: center;
+    overflow: visible;
+
+}
+.navegacao {
     -webkit-text-stroke: #0f0202 0.5px;
 
     z-index: 1000;
