@@ -15,6 +15,8 @@
     <!--Referencia ao Arquivo CSS para design e cores-->
     <link rel="stylesheet" href="../css/style.css">
 
+    <link rel="stylesheet" href="../css/post.css">
+
     <!--Referencia a fonte do google fonts para o estilo de letra-->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
@@ -74,6 +76,120 @@
     </a>
     
 </nav>
-
-
 </section>
+
+<section>
+
+<div id="articles-carousel">
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <div class="article-slide">
+
+                <img
+                    class="article-image"
+                    src="../Assets/imgs/posts/Selos-significados.jpg"
+                    alt="Carne para análise de qualidade"
+                >
+
+                <div class="article-info">
+                    <h3>Como diferenciar a qualidade da carne?</h3>
+
+                    <p>
+                        Aprenda a observar as características
+                        que ajudam a avaliar a qualidade da carne.
+                    </p>
+
+                    <a class="article-link"
+                    href="posts/post-teste.html">
+                        Ler artigo →
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Os próximos slides seguem a mesma estrutura -->
+         
+<!-- Segundo artigo -->
+<div class="carousel-item">
+    <div class="article-slide">
+
+        <img
+            class="article-image"
+            src="../Assets/imgs/posts/cheiros.jpg"
+            alt="Carne fresca"
+        >
+
+        <div class="article-info">
+            <h3>Como identificar a carne fresca?</h3>
+
+            <p>
+                Descubra como a cor, o cheiro e a aparência
+                podem ajudar na avaliação da carne.
+            </p>
+
+            <a
+                class="article-link"
+                href="posts/post-cheiros.html">
+                Ler artigo →
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<!-- Terceiro artigo -->
+<div class="carousel-item">
+    <div class="article-slide">
+
+        <img
+            class="article-image"
+            src="../Assets/imgs/posts/descubra-cortes.jpg"
+            alt="Diferentes cortes de carne"
+        >
+
+        <div class="article-info">
+            <h3>Conheça os diferentes cortes</h3>
+
+            <p>
+                Conheça os principais cortes de carne
+                e descubra suas características.
+            </p>
+
+            <a
+                class="article-link"
+                href="posts/post-cortes.html">
+                Ler artigo →
+            </a>
+        </div>
+
+    </div>
+</div>
+</div>
+
+<div class="carousel-controls">
+    <button
+    id="prev-article"
+    class="carousel-button"
+    type="button"
+    aria-label="Artigo anterior">
+    ←
+</button>
+
+<button
+    id="next-article"
+    class="carousel-button"
+    type="button"
+    aria-label="Próximo artigo">
+    →
+</button>
+</div>
+
+
+        
+</div>
+    
+</section>
+<script src="../js/post/post.js"></script>
+
