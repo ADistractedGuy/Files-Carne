@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File&Carne</title>
 
+    <script>
+        try {
+            if (localStorage.getItem('clear-mode') === 'true') {
+                document.documentElement.classList.add('white');
+            }
+        } catch (e) {}
+    </script>
+    
     <!--Referencia ao Arquivo CSS para design e cores-->
     <link rel="stylesheet" href="css/style.css">
 
@@ -61,17 +69,15 @@
         <img src="Assets/imgs/pixel-meats/pixel-meats-32/meatball.png" class="icon">
     </a>
 
-    <a href="#" id="btt-sound" class="btt"> 
-        <img src="Assets/imgs/pixel-meats/pixel-meats-32/chicken-leg.png" class="icon">
-        <p class="pixelify-sans-btt">Contatos </p>
-        <img src="Assets/imgs/pixel-meats/pixel-meats-32/chicken-leg.png" class="icon">
-    </a>
-
     <a href="#" id="btt-sound" class="btt">
         <img src="Assets/imgs/pixel-meats/pixel-meats-32/ham.png" class="icon">
         <p class="pixelify-sans-btt">Créditos </p>
         <img src="Assets/imgs/pixel-meats/pixel-meats-32/ham.png" class="icon">
     </a>
+
+    <!-- Cole isto no final da sua div container -->
+<button id="theme-toggle" class="btt">​☀️​</button>
+
     
 </nav>
 

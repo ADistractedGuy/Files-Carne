@@ -583,3 +583,169 @@ background-color: aqua;
     transition: width .5s ease;
 }
 /* ======== FIM - Quiz.HTML ========*/
+
+
+
+
+
+/* ======== MODO CLARO  ======== */
+
+body.white {
+    /* Paleta do modo claro */
+    --bg-header-gradient: #B8875B;
+    --bg-body-gradient: #6B4936;
+
+    --red-strong: #6B1728;
+    --red-main: #A65345;
+
+    --hero-bg: #8C6246;
+    --title-bg: #C49A70;
+    --post-bg: #D2AD88;
+
+    --text: #FFF0D9;
+    --gold: #E0B66F;
+
+    --text-dark: #3A251B;
+    --button-bg: #6B1728;
+    --button-hover: #8C293C;
+}
+
+/* Fundo geral */
+body.white {
+    background: var(--bg-body-gradient);
+    color: var(--text);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Cabeçalho e logo */
+body.white header {
+    background: var(--bg-header-gradient);
+    border-bottom-color: var(--gold);
+}
+
+/* Barra de navegação */
+body.white .container,
+body.white .navegacao {
+    background-color: var(--red-strong);
+}
+
+/* Botões do menu */
+body.white .btt {
+    background: var(--button-bg);
+    color: var(--text);
+    border-color: var(--gold);
+}
+
+body.white .btt:hover {
+    background: var(--button-hover);
+}
+
+/* Área de posts */
+body.white .hero {
+    background: var(--hero-bg);
+    border-color: var(--gold);
+}
+
+/* Título Recent Posts */
+body.white .title {
+    background: var(--title-bg);
+    color: var(--text-dark);
+    border-color: var(--gold);
+    text-shadow: none;
+}
+
+/* Cards de posts */
+body.white .post {
+    background: var(--post-bg);
+    border-color: var(--red-strong);
+    color: var(--text-dark);
+    box-shadow: 0 0 10px rgba(40, 20, 10, 0.35);
+}
+
+/* Títulos dos cards */
+body.white .post h1 {
+    color: var(--text-dark);
+    text-shadow: none;
+    filter: none;
+}
+
+/* Descrições dos cards */
+body.white .post p {
+    color: var(--text-dark);
+    text-shadow: none;
+}
+
+/* Efeito ao passar o mouse */
+body.white .post:hover {
+    border-color: var(--gold);
+    box-shadow: 0 0 15px rgba(40, 20, 10, 0.5);
+}
+
+/* Imagens dos posts */
+body.white .img_post {
+    border-color: var(--red-strong);
+}
+
+/* Seção do quiz */
+body.white .category {
+    background: #543828;
+    color: var(--text);
+    border-color: var(--gold);
+    box-shadow: 0 0 15px rgba(40, 20, 10, 0.3);
+}
+
+body.white .Quiz {
+    background: #8C6246;
+    border-color: var(--red-strong);
+    color: var(--text);
+}
+
+/* Botão do quiz */
+body.white .btt-quiz {
+    background: var(--button-bg);
+    color: var(--text);
+    border-color: var(--gold);
+}
+
+body.white .btt-quiz:hover {
+    background: var(--button-hover);
+}
+
+/* Rodapé */
+body.white footer {
+    background: #543828;
+    color: var(--text);
+    border-color: var(--gold);
+}
+
+/* Barra de rolagem */
+body.white ::-webkit-scrollbar-track {
+    background: #543828;
+}
+
+body.white ::-webkit-scrollbar-thumb {
+    background: var(--red-strong);
+    border-color: var(--gold);
+}
+
+body.white ::-webkit-scrollbar-thumb:hover {
+    background: var(--red-main);
+}
+
+/* Transições */
+body.white header,
+body.white .hero,
+body.white .title,
+body.white .post,
+body.white .container,
+body.white .navegacao,
+body.white .btt,
+body.white .category,
+body.white .Quiz,
+body.white footer {
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease;
+}
+
+
