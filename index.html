@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File&Carne</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script>
         try {
@@ -16,57 +14,65 @@
     
     <!--Referencia ao Arquivo CSS para design e cores-->
     <link rel="stylesheet" href="css/style.css">
+    <title>File&Carne — Guia de Carnes e Preparos</title>
 
-    <!--Referencia a fonte do google fonts para o estilo de letra-->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta name="description"
+          content="Aprenda sobre cortes de carne, qualidade, armazenamento, preparo e dicas para escolher melhor no açougue.">
 
-    <!--===========Pixelify- sans Fonte===========-->
+    <meta name="theme-color" content="#1a0505">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="File&Carne — Guia de Carnes">
+    <meta property="og:description"
+          content="Descubra cortes, aprenda técnicas de preparo e conheça melhor o universo das carnes.">
+    <meta property="og:image"
+          content="Assets/imgs/new-logo-removebg(1).png">
+
+    <link rel="icon" href="Assets/imgs/new-logo-removebg(1).png">
+    <link rel="stylesheet" href="css/style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 
-    <!--============Jersey 10 Fonte ============-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap"
+          rel="stylesheet">
 
-    <!-- ============= Bootstrap ===============-->
-<!--
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    -->
+    <script src="js/main.js" defer></script>
 </head>
-
 
 <body>
 <header>
     <div class="logo">
         <div class="logo-area">
-            <img src="Assets/imgs/new-logo-removebg(1).png" alt="LOGO" width="270px" height="170px"> 
+            <a href="../../index.html">
+                <img
+                    src="../../Assets/imgs/new-logo-removebg(1).png"
+                    alt="Logotipo File&Carne"
+                    width="270"
+                    height="170"
+                >
+            </a>
         </div>
     </div>
 </header>
 
-    <!--====== NAVBAR ======-->
-
-<nav class="container">
-    <a href="pages/about.html" class="btt">
-        <img src="Assets/imgs/pixel-meats/pixel-meats-32/bacon.png" class="icon">
-        <p class="pixelify-sans-btt">About </p>
-        <img src="Assets/imgs/pixel-meats/pixel-meats-32/bacon.png" class="icon">
+<nav class="container" aria-label="Navegação principal">
+    <a href="pages/about.html" class="btt btt-sound">
+        <img src="Assets/imgs/pixel-meats/pixel-meats-32/bacon.png"
+             alt="" class="icon">
+        <span class="pixelify-sans-btt">Sobre</span>
     </a>
 
-    <a href="pages/quiz.html" id="btt-sound" class="btt">
-        <img src="Assets/imgs/pixel-meats/pixel-meats-32/hamburger-patty.png" class="icon">
-        <p class="pixelify-sans-btt">Quiz </p>
-        <img src="Assets/imgs/pixel-meats/pixel-meats-32/hamburger-patty.png" class="icon">
+    <a href="pages/quiz.html" class="btt btt-sound">
+        <img src="Assets/imgs/pixel-meats/pixel-meats-32/hamburger-patty.png"
+             alt="" class="icon">
+        <span class="pixelify-sans-btt">Quiz</span>
     </a>
 
-    <a href="pages/post.html" id="btt-sound" class="btt">
-        <img src="Assets/imgs/pixel-meats/pixel-meats-32/meatball.png" class="icon">
-        <p class="pixelify-sans-btt">Posts </p>
-        <img src="Assets/imgs/pixel-meats/pixel-meats-32/meatball.png" class="icon">
+    <a href="pages/posts.html" class="btt btt-sound">
+        <img src="Assets/imgs/pixel-meats/pixel-meats-32/meatball.png"
+             alt="" class="icon">
+        <span class="pixelify-sans-btt">Posts</span>
     </a>
 
     <a href="#" id="btt-sound" class="btt">
@@ -78,88 +84,110 @@
     <!-- Cole isto no final da sua div container -->
 <button id="theme-toggle" class="btt">​☀️​</button>
 
-    
-</nav>
-
-<section class="hero">
-
-    <div class="title">
-        <h1 class="pixelify-sans-title">Recent Posts</h1>
-    </div>
-    
-    <div class="hero-content">
-
-        <a id="post1" class="post" href="pages/posts/post-teste.html">
-            <img class="img_post" src="Assets/imgs/posts/Selos-significados.jpg" alt="">
-            <h1 class="pixelify-sans-400">  
-                    Qualidade De Carne
-                    Como diferenciar?
-                </h1>
-            <p >Conhece todos as 3 qualidades de carne? Descubra como diferenciar e o que cada uma significa.
-            </p>        
-        </a>
-
-        <a class="post" href="">
-            
-            <img class="img_post" src="Assets/imgs/posts/cheiros.jpg" alt="Logo">
-            <h1 class="pixelify-sans-400"> 
-                    Descubra Cortes de Carne
+<main>
+    <section class="hero" aria-labelledby="recent-posts-title">
+        <div class="title">
+            <h1 id="recent-posts-title" class="pixelify-sans-title">
+                Últimas publicações
             </h1>
-            <p >Descubra tipos diferentes de cortes e para que os usar.</p>
-        </a>
-
-        <a class="post" href="">
-            <img class="img_post" src="Assets/imgs/posts/descubra-cortes.jpg" alt="Logo">
-            <h1 class="pixelify-sans-400">Como Diferenciar Cheiros E Aromas</h1>
-            <p >Descubra como identificar e diferenciar os cheiros e aromas de diferentes tipos de carne.</p>
-        </a>
-
-        <a class="post" href="">
-            <img class="img_post" src="Assets/imgs/posts/Qualidade-carne.jpg" alt="Logo">
-            <h1 class="pixelify-sans-400"> Os Selos E Seus Significados
-            </h1>
-            <p >O que cada selo significa e como ele pode te ajudar a escolher a carne certa para o seu prato favorito.</p>
-        </a>
-
-
-
-    </div>
-</section>
-<div class="space"></div>
-
-<section class="category">
-
-    <div class="cat-content">
-
-        <div class="Quiz">
-            
-            <h1>Quiz</h1>
-            <p>Teste seu conhecimento </p>
-            <p>Descubra se realmente sabe o sulficiente sobre Carnes e preparo</p>
-
-            <a href="pages/quiz.html" id="btt-quiz" class="btt-quiz">Jogar</a>
         </div>
-    </div>
-</section>
+
+        <div class="hero-content" id="recent-posts">
+            <article class="post">
+                <a href="pages/posts/post-teste.html">
+                    <img class="img_post"
+                         src="Assets/imgs/posts/Selos-significados.jpg"
+                         alt="Informações sobre qualidade e classificação da carne">
+                    <h2 class="pixelify-sans-400">
+                        Qualidade da carne: como diferenciar?
+                    </h2>
+                    <p>
+                        Entenda as diferenças entre os tipos de carne e
+                        saiba como escolher o corte adequado.
+                    </p>
+                </a>
+            </article>
+
+            <article class="post">
+                <a href="pages/posts/cortes-de-carne.html">
+                    <img class="img_post"
+                         src="Assets/imgs/posts/descubra-cortes.jpg"
+                         alt="Guia ilustrado de cortes de carne">
+                    <h2 class="pixelify-sans-400">
+                        Descubra os cortes de carne
+                    </h2>
+                    <p>
+                        Conheça diferentes cortes e descubra quais preparos
+                        combinam com cada um.
+                    </p>
+                </a>
+            </article>
+
+            <article class="post">
+                <a href="pages/posts/cheiros-e-aromas.html">
+                    <img class="img_post"
+                         src="Assets/imgs/posts/cheiros.jpg"
+                         alt="Artigo sobre os cheiros e aromas da carne">
+                    <h2 class="pixelify-sans-400">
+                        Como diferenciar cheiros e aromas
+                    </h2>
+                    <p>
+                        Aprenda a reconhecer características sensoriais
+                        e sinais que exigem atenção.
+                    </p>
+                </a>
+            </article>
+
+            <article class="post">
+                <a href="pages/posts/selos-de-inspecao.html">
+                    <img class="img_post"
+                         src="Assets/imgs/posts/Qualidade-carne.jpg"
+                         alt="Artigo explicativo sobre selos de inspeção">
+                    <h2 class="pixelify-sans-400">
+                        Os selos e seus significados
+                    </h2>
+                    <p>
+                        Entenda a importância da inspeção e o que observar
+                        na embalagem dos produtos.
+                    </p>
+                </a>
+            </article>
+        </div>
+
+        <p>
+            <a href="pages/posts.html" class="btt-quiz">
+                ➕​ artigos
+            </a>
+        </p>
+    </section>
+
+    <section class="category" aria-labelledby="quiz-title">
+        <div class="cat-content">
+            <div class="Quiz">
+                <h2 id="quiz-title">Quiz</h2>
+                <p>Teste seus conhecimentos sobre carnes e preparo.</p>
+                <a href="pages/quiz.html" class="btt-quiz">Jogar</a>
+            </div>
+        </div>
+    </section>
+</main>
 
 <footer>
-    <p class="foot">&copy; 2026 My Website. All rights reserved.</p>
-    <button id="B-cat" class="B-cat">
-    <img src="Assets/imgs/ballon-cat.gif" alt="cat gif" style="width:30px; height: 50px;">
-</button>
+    <p class="foot">
+        &copy; <span id="current-year">2026</span> File&Carne.
+        Todos os direitos reservados.
+    </p>
+
+    <button id="B-cat"
+            class="B-cat"
+            type="button"
+            aria-label="Ativar ou desativar os sons do site"
+            aria-pressed="false">
+        <img src="Assets/imgs/ballon-cat.gif"
+             alt=""
+             width="30"
+             height="50">
+    </button>
 </footer>
-<script src="js/main.js"></script>
-<!--
-Por que usar inline no <head>?
-    
-Isso é útil quando o código é crítico, por exemplo:
-
-lembrar depois -- Detectar tema (dark/light) antes da tela aparecer
-Configurar algo essencial para evitar “flicker” visual
-Pequenas configurações iniciais    
-    
--->
-
 </body>
-
 </html>
