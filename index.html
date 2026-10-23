@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <script>
+        try {
+            if (localStorage.getItem('clear-mode') === 'true') {
+                document.documentElement.classList.add('white');
+            }
+        } catch (e) {}
+    </script>
+    
+    <!--Referencia ao Arquivo CSS para design e cores-->
+    <link rel="stylesheet" href="css/style.css">
     <title>File&Carne — Guia de Carnes e Preparos</title>
 
     <meta name="description"
@@ -65,18 +75,14 @@
         <span class="pixelify-sans-btt">Posts</span>
     </a>
 
-    <a href="pages/contact.html" class="btt btt-sound">
-        <img src="Assets/imgs/pixel-meats/pixel-meats-32/chicken-leg.png"
-             alt="" class="icon">
-        <span class="pixelify-sans-btt">Contato</span>
+    <a href="#" id="btt-sound" class="btt">
+        <img src="Assets/imgs/pixel-meats/pixel-meats-32/ham.png" class="icon">
+        <p class="pixelify-sans-btt">Créditos </p>
+        <img src="Assets/imgs/pixel-meats/pixel-meats-32/ham.png" class="icon">
     </a>
 
-    <a href="pages/credits.html" class="btt btt-sound">
-        <img src="Assets/imgs/pixel-meats/pixel-meats-32/ham.png"
-             alt="" class="icon">
-        <span class="pixelify-sans-btt">Créditos</span>
-    </a>
-</nav>
+    <!-- Cole isto no final da sua div container -->
+<button id="theme-toggle" class="btt">​☀️​</button>
 
 <main>
     <section class="hero" aria-labelledby="recent-posts-title">
