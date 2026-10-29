@@ -1,0 +1,7 @@
+{
+    "name": "porteiro-gemini",
+    "type": "module",
+    "dependencies": {
+      "@google/genai": "^0.1.1" 
+    }
+  }
