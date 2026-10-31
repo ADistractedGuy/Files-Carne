@@ -72,11 +72,11 @@ export default async function handler(req, res) {
 
             config: {
                 // Permite que o Gemini pesquise na internet quando necessário
-                tools: [
-                    {
-                        googleSearch: {}
-                    }
-                ],
+                //tools: [
+                  //  {
+                    //    googleSearch: {}
+                    //}
+                //],
 
                 // Define o comportamento e as fontes prioritárias do ButcherBot
                 systemInstruction: `
