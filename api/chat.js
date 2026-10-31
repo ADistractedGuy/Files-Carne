@@ -67,7 +67,7 @@ export default async function handler(req, res) {
         });
  // 7. Envia a mensagem ao Gemini com pesquisa externa habilitada
         const response = await ai.models.generateContent({
-            model: "gemini-3.8-flash",
+            model: "gemini-3.5-flash-lite",
             contents: mensagemUsuario,
 
             config: {
