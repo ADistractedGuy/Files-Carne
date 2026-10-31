@@ -119,6 +119,15 @@ export default async function handler(req, res) {
 
                     Recuse educadamente perguntas que não tenham relação
                     com esse objetivo.
+
+                    PRECISÃO TÉCNICA:
+                    - Nunca invente nomes, classificações ou localizações anatômicas de cortes.
+                    - Utilize prioritariamente a nomenclatura brasileira de cortes bovinos.
+                    - Diferencie cortes brasileiros de cortes estrangeiros.
+                    - Não associe cortes diferentes como se fossem equivalentes.
+                    - Quando houver divergência entre padrões de classificação, explique a diferença.
+                    - Se não tiver certeza de uma informação, informe isso claramente.
+                    - Não invente fontes, estudos, instituições ou referências bibliográficas.
                 `
             }
         });
