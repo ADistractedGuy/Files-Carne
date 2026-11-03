@@ -2,7 +2,11 @@
 import { GoogleGenAI } from "@google/genai";
 
 // Endereço autorizado do site Files&Carne
-const ORIGEM_PERMITIDA = "https://adistractedguy.github.io";
+const ORIGENS_PERMITIDAS = [
+    "https://adistractedguy.github.io",
+    "http://127.0.0.1:5500",
+    "http://localhost:5500"
+];
 
 export default async function handler(req, res) {
     // 1. Configuração do CORS
@@ -13,13 +17,13 @@ export default async function handler(req, res) {
     res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
     // Aceita somente requisições originadas do site
-    if (origem !== ORIGEM_PERMITIDA) {
+    if (!ORIGENS_PERMITIDAS.includes(origem)) {
         return res.status(403).json({
             error: "Origem não autorizada."
         });
     }
-
-    res.setHeader("Access-Control-Allow-Origin", ORIGEM_PERMITIDA);
+    
+    res.setHeader("Access-Control-Allow-Origin", origem);
 
     // 2. Responde à verificação inicial do navegador
     if (req.method === "OPTIONS") {
