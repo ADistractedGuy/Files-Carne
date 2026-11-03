@@ -44,7 +44,10 @@ export default async function handler(req, res) {
         }
 
         // 5. Recebe e valida a mensagem
-        const { mensagemUsuario } = req.body || {};
+        const {
+            mensagemUsuario,
+            historico = []
+        } = req.body || {};
 
         if (
             typeof mensagemUsuario !== "string" ||
@@ -61,6 +64,37 @@ export default async function handler(req, res) {
             });
         }
 
+        // 6. Prepara o histórico para o formato do Gemini
+        const historicoSeguro = Array.isArray(historico)
+            ? historico
+                .filter(item =>
+                    item &&
+                    ["user", "assistant"].includes(item.role) &&
+                    typeof item.content === "string" &&
+                    item.content.trim() !== ""
+                )
+                .slice(-20)
+            : [];
+
+        // Converte as mensagens para o formato do Gemini
+        const conteudoConversa = historicoSeguro.map(item => ({
+            role: item.role === "assistant" ? "model" : "user",
+            parts: [{ text: item.content.slice(0, 2000) }]
+        }));
+
+        // Verifica se a pergunta atual já está no histórico
+        const ultimaMensagem = historicoSeguro[historicoSeguro.length - 1];
+
+        if (
+            !ultimaMensagem ||
+            ultimaMensagem.role !== "user" ||
+            ultimaMensagem.content !== mensagemUsuario
+        ) {
+            conteudoConversa.push({
+                role: "user",
+                parts: [{ text: mensagemUsuario }]
+            });
+        }
         // 6. Inicializa o Gemini
         const ai = new GoogleGenAI({
             apiKey: process.env.GEMINI_API_KEY
@@ -68,7 +102,7 @@ export default async function handler(req, res) {
  // 7. Envia a mensagem ao Gemini com pesquisa externa habilitada
         const response = await ai.models.generateContent({
             model: "gemini-3.5-flash-lite",
-            contents: mensagemUsuario,
+            contents: conteudoConversa,
 
             config: {
                 // Permite que o Gemini pesquise na internet quando necessário

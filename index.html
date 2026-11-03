@@ -13,8 +13,8 @@
     </script>
     
     <!--Referencia ao Arquivo CSS para design e cores-->
-    <link rel="stylesheet" href="css/style.css">
     <title>File&Carne — Guia de Carnes e Preparos</title>
+
 
     <meta name="description"
           content="Aprenda sobre cortes de carne, qualidade, armazenamento, preparo e dicas para escolher melhor no açougue.">
@@ -29,15 +29,21 @@
           content="Assets/imgs/new-logo-removebg(1).png">
 
     <link rel="icon" href="Assets/imgs/new-logo-removebg(1).png">
+     
+    <!-- Referência ao arquivo CSS-->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chatBot.css">
 
+    <!-- Referência de fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap"
           rel="stylesheet">
 
+    <!-- Referência ao arquivo JS-->      
     <script src="js/main.js" defer></script>
+    <script src="js/chatbot.js" defer></script>
 </head>
 
 <body>
@@ -84,7 +90,13 @@
     <!-- Cole isto no final da sua div container -->
     <button id="theme-toggle" class="btt">​☀️​</button>
 
+    <!-- Botão para abrir o ButcherBot -->
+    <button class="btt" id="open-chat" type="button">
+       <p> -> BUTCHERBOT <- </p> 
+    </button>
+
     </nav>
+
 <main>
     <section class="hero" aria-labelledby="recent-posts-title">
         <div class="title">
@@ -173,6 +185,7 @@
     </section>
 </main>
 
+
 <footer>
     <p class="foot">
         &copy; <span id="current-year">2026</span> File&Carne.
@@ -190,5 +203,67 @@
              height="50">
     </button>
 </footer>
+
+
+
+
+<div class="chatbot">
+<!-- Cabeçalho do ButcherBot -->
+<header class="chat-bot-header">
+
+    <img
+        src="Assets/imgs/pixel-meats/pixel-meats-32/steak.png"
+        alt="Ícone do ButcherBot"
+        class="chat-bot-icon"
+    >
+
+    <h2 class="pixelify-sans-400">ButcherBot</h2>
+
+    <button
+        id="close-chat"
+        class="close-chat"
+        type="button"
+        aria-label="Fechar chat"
+    >
+        X
+    </button>
+
+</header>
+
+    <div id="chat-messages" class="chat-messages" aria-live="polite">
+
+        <!-- Mensagem inicial do ButcherBot -->
+        <div class="chat-message bot-message">
+            <p>
+                Olá! Eu sou o ButcherBot.
+                Como posso ajudar você com o universo das carnes?
+            </p>
+        </div>
+    </div>
+
+    <!-- Área para escrever e enviar mensagens -->
+    <form id="chat-form" class="chat-form">
+
+        <input
+            type="text"
+            id="chat-input"
+            class="chat-input"
+            placeholder="Pergunte algo sobre carnes..."
+            autocomplete="off"
+            required
+        >
+
+        <button type="submit" id="chat-send" class="chat-send">
+            Enviar
+        </button>
+
+    </form>
+
+</div>
+
+
+
+
+
 </body>
 </html>
