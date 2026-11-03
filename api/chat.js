@@ -166,6 +166,18 @@ export default async function handler(req, res) {
                     - Quando houver divergência entre padrões de classificação, explique a diferença.
                     - Se não tiver certeza de uma informação, informe isso claramente.
                     - Não invente fontes, estudos, instituições ou referências bibliográficas.
+
+                    FORMATO DAS RESPOSTAS:
+
+                    - Seja direto e objetivo.
+                    - Prefira respostas entre 80 e 120 palavras.
+                    - Evite introduções desnecessárias.
+                    - Utilize parágrafos curtos.
+                    - Utilize listas apenas quando facilitarem a compreensão.
+                    - Utilize negrito para destacar termos importantes.
+                    - Não repita informações.
+                    - Se o assunto exigir detalhes técnicos ou envolver segurança alimentar, forneça as informações necessárias mesmo que ultrapasse o limite sugerido.
+                    - Ao final, não faça perguntas desnecessárias.
                 `
             }
         });
@@ -180,6 +192,8 @@ export default async function handler(req, res) {
                 titulo: chunk.web.title,
                 url: chunk.web.uri
             }));
+
+        res.setHeader("Content-Type", "application/json; charset=utf-8");
 
         // 9. Retorna a resposta e suas fontes ao site
         return res.status(200).json({
