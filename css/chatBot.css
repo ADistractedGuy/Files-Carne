@@ -1,0 +1,300 @@
+
+/* ========================================
+   BUTCHERBOT - JANELA PRINCIPAL
+======================================== */
+
+.chatbot {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 380px;
+    max-width: calc(100% - 30px);
+    height: 550px;
+    max-height: calc(100vh - 40px);
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #1a0505;
+    border: 2px solid #b51f24;
+    border-radius: 8px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+
+    z-index: 1000;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.chat-bot-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 12px 15px;
+
+    background-color: #350d0d;
+    border-bottom: 2px solid #b51f24;
+
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.chat-bot-icon {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.chat-bot-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+/* Botão fechar */
+
+.close-chat {
+    margin-left: auto;
+
+    background: transparent;
+    color: #ffffff;
+
+    border: none;
+    padding: 5px 10px;
+
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close-chat:hover {
+    color: #ff4545;
+}
+
+/* ========================================
+   ÁREA DE MENSAGENS
+======================================== */
+
+.chat-messages {
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    padding: 15px;
+    background-color: #0d0202;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-wrap: anywhere;
+}
+/* ========================================
+   ESTILO GERAL DAS MENSAGENS
+======================================== */
+
+.chat-message {
+    max-width: 85%;
+
+    padding: 10px 12px;
+    border-radius: 6px;
+
+    color: #ffffff;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 16px;
+
+    line-height: 1.5;
+}
+
+.chat-message p {
+    margin: 0;
+}
+
+/* Mensagem do ButcherBot */
+
+.bot-message {
+    align-self: flex-start;
+
+    background-color: #351010;
+    border-left: 3px solid #d32f2f;
+}
+
+/* Mensagem do usuário */
+
+.user-message {
+    align-self: flex-end;
+
+    background-color: #681b1b;
+    border-right: 3px solid #ff4545;
+}
+
+/* ========================================
+   FORMULÁRIO DE ENVIO
+======================================== */
+
+.chat-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px;
+
+    background-color: #1a0505;
+    border-top: 1px solid #5c1717;
+
+    flex: 0 0 auto;
+}
+
+/* Campo de texto */
+
+.chat-input {
+    flex: 1;
+    min-width: 0;
+
+    padding: 11px;
+
+    background-color: #250909;
+    color: #ffffff;
+
+    border: 1px solid #8f2929;
+    border-radius: 5px;
+
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 15px;
+}
+
+.chat-input::placeholder {
+    color: #b98b8b;
+}
+
+.chat-input:focus {
+    outline: 2px solid #d32f2f;
+    outline-offset: 1px;
+}
+
+/* Botão enviar */
+
+.chat-send {
+    padding: 10px 15px;
+
+    background-color: #b51f24;
+    color: #ffffff;
+
+    border: 1px solid #ff4545;
+    border-radius: 5px;
+
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 15px;
+
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.chat-send:hover {
+    background-color: #e02b32;
+}
+
+.chat-send:disabled {
+    background-color: #555555;
+    border-color: #555555;
+    cursor: not-allowed;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .chatbot {
+        right: 10px;
+        bottom: 10px;
+
+        width: calc(100% - 20px);
+        height: 75vh;
+        max-height: calc(100vh - 20px);
+    }
+
+    .chat-bot-header {
+        padding: 10px;
+    }
+
+    .chat-messages {
+        padding: 10px;
+    }
+
+    .chat-message {
+        max-width: 90%;
+        font-size: 15px;
+    }
+
+    .chat-form {
+        padding: 8px;
+        gap: 6px;
+    }
+
+    .chat-input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .chat-send {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
+/*======== Hidden Chatbot =======*/
+
+/* Esconde a janela quando estiver fechada */
+.chatbot.is-hidden {
+    display: none;
+}
+
+/* ========================================
+   FONTES E REFERÊNCIAS
+======================================== */
+
+.chat-sources {
+    align-self: flex-start;
+    max-width: 90%;
+
+    padding: 10px;
+
+    background-color: #241010;
+    border: 1px solid #5c1717;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    overflow-wrap: anywhere;
+}
+
+.chat-sources p {
+    margin: 0;
+    color: #e5baba;
+    font-weight: bold;
+}
+
+.chat-sources a {
+    color: #ff7777;
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+.chat-sources a:hover {
+    color: #ffffff;
+}
