@@ -46,14 +46,15 @@
 }
 
 .chat-bot-icon {
-    width: 35px;
-    height: 35px;
+    width: 55px;
+    height: 55px;
     object-fit: contain;
+    filter: contrast(1.1) saturate(1.1);    
 }
 
 .chat-bot-header h2 {
     margin: 0;
-    font-size: 20px;
+    font-size: 23px;
 }
 
 /* Botão fechar */
@@ -298,3 +299,58 @@
 .chat-sources a:hover {
     color: #ffffff;
 }
+
+/* ========================================
+   TEXTO DAS RESPOSTAS DO BUTCHERBOT
+======================================== */
+
+.bot-message {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #f1f1f1;
+}
+
+/* Texto em negrito */
+.bot-message strong {
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #ff5555;
+    text-shadow: #0d0202 solid 1px 2px;
+}
+
+/* Títulos */
+.bot-message h1,
+.bot-message h2,
+.bot-message h3 {
+    font-family: 'Jersey 10', sans-serif;
+    color: #ff3333;
+    margin: 12px 0 8px;
+}
+
+/* Parágrafos */
+.bot-message p {
+    margin: 8px 0;
+    letter-spacing: 2px;
+}
+
+/* Listas */
+.bot-message ul,
+.bot-message ol {
+    padding-left: 22px;
+    margin: 8px 0;
+}
+
+/* Espaçamento entre itens */
+.bot-message li {
+    margin-bottom: 5px;
+}
+
+/* Código */
+.bot-message code {
+    font-family: monospace;
+    background-color: #292929;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
