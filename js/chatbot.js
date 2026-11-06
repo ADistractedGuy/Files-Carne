@@ -28,6 +28,8 @@ if (
 ) {
     console.error("ButcherBot: não foi possível encontrar todos os elementos HTML.");
 } else {
+    // Garante que o chatbot comece fechado
+    chatbot.classList.add("is-hidden");
 
     // ========================================
     // 2. ABRIR E FECHAR O CHATBOT
