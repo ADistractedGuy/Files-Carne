@@ -11,6 +11,7 @@ const ORIGENS_PERMITIDAS = [
 export default async function handler(req, res) {
     // 1. Configuração do CORS
     const origem = req.headers.origin;
+    console.log("[CORS] Origem recebida:", JSON.stringify(origem));
 
     res.setHeader("Vary", "Origin");
     res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
