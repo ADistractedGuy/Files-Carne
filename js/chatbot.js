@@ -33,15 +33,17 @@ if (
     // 2. ABRIR E FECHAR O CHATBOT
     // ========================================
 
-    // Abre a janela
+    // Abre o chatbot com animação
     openChat.addEventListener("click", () => {
         chatbot.classList.remove("is-hidden");
+
         chatInput.focus();
     });
 
-    // Fecha a janela
+    // Fecha o chatbot com animação
     closeChat.addEventListener("click", () => {
         chatbot.classList.add("is-hidden");
+
         openChat.focus();
     });
 
@@ -51,24 +53,32 @@ if (
 
     function adicionarMensagem(texto, tipo) {
 
-        // Cria o elemento da mensagem
         const mensagem = document.createElement("div");
-
         mensagem.classList.add("chat-message", tipo);
-
-        // Cria o parágrafo
-        const paragrafo = document.createElement("p");
-
-        // Insere o texto com segurança
-        paragrafo.textContent = texto;
-
-        // Coloca o parágrafo dentro da mensagem
-        mensagem.appendChild(paragrafo);
-
-        // Adiciona a mensagem à conversa
+    
+        const conteudo = document.createElement("div");
+    
+        if (tipo === "bot-message") {
+    
+            if (typeof marked !== "undefined" &&
+                typeof DOMPurify !== "undefined") {
+    
+                const html = marked.parse(texto || "");
+    
+                conteudo.innerHTML = DOMPurify.sanitize(html);
+    
+            } else {
+                console.error("Marked ou DOMPurify não foi carregado.");
+                conteudo.textContent = texto;
+            }
+    
+        } else {
+            conteudo.textContent = texto;
+        }
+    
+        mensagem.appendChild(conteudo);
         chatMessages.appendChild(mensagem);
-
-        // Rola até a última mensagem
+    
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 

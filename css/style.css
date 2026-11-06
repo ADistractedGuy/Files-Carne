@@ -1058,3 +1058,33 @@ body.white footer {
 
 
 /*========= FIM - Carrosel ===========*/
+
+/* ========================================
+   ANIMAÇÃO DE ABERTURA E FECHAMENTO
+======================================== */
+
+.chatbot {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transform-origin: bottom right;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+}
+
+/* Estado fechado */
+.chatbot.is-hidden {
+    opacity: 0;
+    transform: translateY(15px) scale(0.96);
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Respeita usuários que preferem movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+    .chatbot {
+        transition: none;
+    }
+}
