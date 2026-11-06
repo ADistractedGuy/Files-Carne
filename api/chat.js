@@ -4,6 +4,7 @@ import { GoogleGenAI } from "@google/genai";
 // Endereço autorizado do site Files&Carne
 const ORIGENS_PERMITIDAS = [
     "https://adistractedguy.github.io",
+    "https://butcherbot.vercel.app",
     "http://127.0.0.1:5500",
     "http://localhost:5500"
 ];
