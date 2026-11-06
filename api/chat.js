@@ -9,34 +9,41 @@ const ORIGENS_PERMITIDAS = [
 ];
 
 export default async function handler(req, res) {
-    // 1. Configuração do CORS
+
+    // 1. Identifica a origem da requisição
     const origem = req.headers.origin;
 
-    res.setHeader("Vary", "Origin");
-    res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    console.log("[CORS] Origem recebida:", origem);
+    console.log("[CORS] Método recebido:", req.method);
 
-    // Aceita somente requisições originadas do site
-    if (!ORIGENS_PERMITIDAS.includes(origem)) {
+    // 2. Valida a origem
+    if (!origem || !ORIGENS_PERMITIDAS.includes(origem)) {
+        console.warn("[CORS] Origem bloqueada:", origem);
+
         return res.status(403).json({
             error: "Origem não autorizada."
         });
     }
-    
-    res.setHeader("Access-Control-Allow-Origin", origem);
 
-    // 2. Responde à verificação inicial do navegador
+    // 3. Configura o CORS
+    res.setHeader("Access-Control-Allow-Origin", origem);
+    res.setHeader("Vary", "Origin");
+    res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+    // 4. Responde ao preflight
     if (req.method === "OPTIONS") {
         return res.status(204).end();
     }
 
-    // 3. Aceita somente POST
+    // 5. Permite somente POST
     if (req.method !== "POST") {
         return res.status(405).json({
             error: "Método não permitido."
         });
     }
 
+    // Mantenha o restante do seu código aqui...
     try {
         // 4. Verifica se a chave da API foi configurada
         if (!process.env.GEMINI_API_KEY) {
