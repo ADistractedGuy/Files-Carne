@@ -1,15 +1,25 @@
 
-media: media
+media:
+  - name: post-images
+    label: Imagens das publicações
+    input: Assets/imgs/posts
+    output: /Assets/imgs/posts
+    extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
 
 content:
   - name: posts
     label: Publicações
     type: collection
     path: content/posts
+    filename: "{year}-{month}-{day}-{primary}.md"
 
     fields:
       - name: title
-        label: Título do artigo
+        label: Título
         type: string
         required: true
 
@@ -23,8 +33,22 @@ content:
         type: date
         required: true
 
+      - name: image
+        label: Imagem de capa
+        type: image
+        required: true
+        options:
+          media: post-images
+          extensions:
+            - jpg
+            - jpeg
+            - png
+            - webp
+
       - name: body
         label: Conteúdo completo
         type: rich-text
         required: true
-
+        options:
+          media: post-images
+          path: artigos
