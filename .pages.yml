@@ -3,7 +3,7 @@ media:
   - name: post-images
     label: Imagens das publicações
     input: Assets/imgs/posts
-    output: /Assets/imgs/posts
+    output: /Files-Carne/Assets/imgs/posts
     extensions:
       - jpg
       - jpeg
