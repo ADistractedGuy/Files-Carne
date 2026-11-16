@@ -1,0 +1,121 @@
+
+/* ===================================
+   CMS - PUBLICAÇÕES E ARTIGOS
+=================================== */
+
+#recent-posts,
+#posts-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    padding: 16px;
+}
+
+#recent-posts .post,
+#posts-list .post {
+    min-width: 0;
+    margin: 0;
+}
+
+#recent-posts .img_post,
+#posts-list .img_post {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+}
+
+.cms-container {
+    max-width: 1000px;
+    margin: 24px auto;
+    padding: 24px;
+}
+
+.cms-article {
+    max-width: 850px;
+    margin: auto;
+    overflow-wrap: anywhere;
+    line-height: 1.8;
+}
+
+.cms-cover {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
+    margin-bottom: 24px;
+    border: 2px solid var(--gold);
+    border-radius: 10px;
+}
+
+.cms-article h1 {
+    margin-bottom: 16px;
+    color: var(--gold);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.cms-description {
+    font-size: 1.2rem;
+}
+
+.cms-date {
+    margin: 12px 0 28px;
+    opacity: 0.75;
+}
+
+.cms-body {
+    line-height: 1.8;
+}
+
+.cms-body h2,
+.cms-body h3 {
+    margin: 28px 0 12px;
+    color: var(--gold);
+}
+
+.cms-body p {
+    margin-bottom: 18px;
+}
+
+.cms-body ul,
+.cms-body ol {
+    margin: 16px 0 16px 28px;
+}
+
+.cms-body img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+.cms-body blockquote {
+    margin: 20px 0;
+    padding: 12px 20px;
+    border-left: 4px solid var(--gold);
+    background: #2b0a0a;
+}
+
+.cms-body pre {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+    #recent-posts,
+    #posts-list {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .cms-container {
+        padding: 14px;
+    }
+
+    .cms-cover {
+        max-height: none;
+    }
+}
