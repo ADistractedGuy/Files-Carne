@@ -41,14 +41,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap"
           rel="stylesheet">
 
-    <!-- Bibliotecas para interpretar Markdown com segurança -->
+    <!-- Biblioteca para converter Markdown em HTML -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>      
 
+    <!-- Biblioteca para proteger o HTML gerado -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+
+    <!-- Biblioteca para interpretar o YAML dos artigos -->
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+
+    <!-- Sistema de integração com o Pages CMS -->
+    <script src="js/cms-posts.js" defer></script>   
     <!-- Referência ao arquivo JS-->      
     <script src="js/main.js" defer></script>
     <script src="js/chatbot.js" defer></script>
-    <script src="js/cms-posts.js" defer></script>
+
 </head>
 
 <body>
@@ -85,7 +92,7 @@
              alt="" class="icon">
         <span class="pixelify-sans-btt">Posts</span>
     </a>
-    
+
     <button id="theme-toggle" class="btt">​☀️​</button>
 
     <!-- Botão para abrir o ButcherBot -->
