@@ -52,3 +52,21 @@ content:
         options:
           media: post-images
           path: artigos
+        
+      - name: faq
+        label: Perguntas frequentes (FAQ)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "Pergunta {index}"
+        fields:
+          - name: question
+            label: Pergunta
+            type: string
+            required: true
+
+          - name: answer
+            label: Resposta
+            type: rich-text
+            required: true
