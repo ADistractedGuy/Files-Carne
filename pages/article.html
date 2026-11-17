@@ -1,57 +1,163 @@
 
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<head>
+    <!-- Configurações básicas da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- O JavaScript poderá atualizar o título conforme o artigo carregado -->
     <title>Artigo | Files&Carne</title>
 
+    <!-- CSS geral do site: cores, botões, cabeçalho e rodapé -->
     <link rel="stylesheet" href="../css/style.css">
+
+    <!-- CSS específico da página de artigos -->
     <link rel="stylesheet" href="../css/cms.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Pixelify+Sans:wght@400..700&display=swap"
-          rel="stylesheet">
+    <!-- Fontes utilizadas no projeto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans:wght@400..700&family=Jersey+10&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Biblioteca para converter Markdown em HTML -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Sanitização do HTML gerado a partir do Markdown -->
     <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
 
+    <!-- Script responsável por buscar e exibir os artigos do CMS -->
     <script src="../js/cms-posts.js" defer></script>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">
-        <div class="logo-area">
-            <a href="../index.html">
-                <img src="../Assets/imgs/new-logo-removebg(1).png"
-                     alt="Files&Carne"
-                     width="270"
-                     height="170">
-            </a>
+    <!-- ==========================================
+         CABEÇALHO / LOGOTIPO
+    =========================================== -->
+    <header class="site-header">
+
+        <div class="logo">
+            <div class="logo-area">
+
+                <!-- Retorna à página inicial -->
+                <a href="../index.html">
+                    <img
+                        src="../Assets/imgs/new-logo-removebg(1).png"
+                        alt="Logotipo Files&Carne"
+                        width="270"
+                        height="170"
+                    >
+                </a>
+
+            </div>
         </div>
-    </div>
-</header>
 
-<nav class="container">
-    <a href="../index.html" class="btt">Início</a>
-    <a href="posts.html" class="btt">Publicações</a>
-</nav>
+    </header>
 
-<main>
-    <section class="hero">
 
+    <!-- ==========================================
+         MENU DE NAVEGAÇÃO
+    =========================================== -->
+    <nav class="container article-navigation" aria-label="Navegação principal">
+
+        <a href="../index.html" class="btt">
+            Início
+        </a>
+
+        <a href="post.html" class="btt">
+            Publicações
+        </a>
+
+        <a href="about.html" class="btt">
+            Sobre
+        </a>
+
+        <a href="quiz.html" class="btt">
+            Quiz
+        </a>
+
+    </nav>
+
+
+    <!-- ==========================================
+         CONTEÚDO PRINCIPAL DO ARTIGO
+    =========================================== -->
+    <main class="article-page">
+
+        <!--
+            O JavaScript insere aqui:
+            - Título
+            - Resumo
+            - Data
+            - Imagem de capa
+            - Sumário
+            - Texto do artigo
+            - FAQ
+            - Bloco de dica, quando existir
+
+            Não remova o ID article-content.
+        -->
         <div class="cms-container" id="article-content">
-            <p>Carregando artigo...</p>
+
+            <!-- Mensagem exibida enquanto o artigo é carregado -->
+            <div class="article-loading">
+                <p>Carregando publicação...</p>
+            </div>
+
         </div>
+        <!-- Seção de perguntas frequentes -->
+<section class="details-section">
+    <h2>Perguntas frequentes</h2>
 
-    </section>
-</main>
+    <!-- Primeira pergunta -->
+    <details class="details">
+        <summary>
+            O que faz uma carne ser considerada de primeira ou de segunda?
+        </summary>
 
-<footer>
-    <p>© 2026 Files&Carne. Todos os direitos reservados.</p>
-</footer>
+        <div class="faq">
+            <p>
+                A classificação está relacionada principalmente à localização
+                do músculo, à quantidade de tecido conjuntivo e às características
+                de cada corte.
+            </p>
+        </div>
+    </details>
+
+    <!-- Segunda pergunta -->
+    <details class="details">
+        <summary>
+            Por que alguns cortes custam muito mais caro?
+        </summary>
+
+        <div class="faq">
+            <p>
+                O preço pode variar conforme a oferta, a procura, o rendimento
+                do corte e as características da carne.
+            </p>
+        </div>
+    </details>
+</section>
+
+    </main>
+
+
+    <!-- ==========================================
+         RODAPÉ
+    =========================================== -->
+    <footer class="site-footer">
+
+        <p>
+            © 2026 Files&Carne. Todos os direitos reservados.
+        </p>
+
+    </footer>
 
 </body>
 </html>

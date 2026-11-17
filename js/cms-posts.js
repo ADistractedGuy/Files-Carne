@@ -5,10 +5,12 @@
 
 const CMS_CONFIG = {
     api: "https://api.github.com/repos/ADistractedGuy/Files-Carne/contents/content/posts?ref=main",
+    raw: "https://raw.githubusercontent.com/ADistractedGuy/Files-Carne/main/content/posts/",
 
-    siteBase: "/Files-Carne/",
-
-    articlePage: "pages/article.html"
+    // Local usa a raiz do projeto; GitHub Pages usa /Files-Carne/.
+    base: (location.hostname === "localhost" || location.hostname === "127.0.0.1")
+        ? "/"
+        : "/Files-Carne/"
 };
 
 
@@ -16,13 +18,21 @@ const CMS_CONFIG = {
 function getImageUrl(path) {
     if (!path) return "";
 
-    if (path.startsWith("http")) {
+    path = path.trim().replace(/^['"]|['"]$/g, "");
+
+    if (/^https?:\/\//i.test(path)) {
         return path;
     }
 
-    return CMS_CONFIG.siteBase + path.replace(/^\/+/, "");
-}
+    path = path.replace(/^\/+/, "");
 
+    // Remove Files-Carne quando estiver em ambiente local.
+    if (path.startsWith("Files-Carne/")) {
+        path = path.substring("Files-Carne/".length);
+    }
+
+    return CMS_CONFIG.base + encodeURI(path);
+}
 
 /* Evita inserir texto HTML diretamente */
 function escapeHTML(value = "") {
@@ -112,18 +122,16 @@ async function getPosts() {
 
 
 /* Cria um card de publicação */
+
 function createPostCard(post) {
     const articleUrl =
-        CMS_CONFIG.siteBase +
-        CMS_CONFIG.articlePage +
-        "?slug=" +
+        CMS_CONFIG.base +
+        "pages/article.html?slug=" +
         encodeURIComponent(post.slug);
 
     return `
         <article class="post">
-
             <a href="${articleUrl}">
-
                 <img
                     class="img_post"
                     src="${escapeHTML(getImageUrl(post.image))}"
@@ -138,9 +146,7 @@ function createPostCard(post) {
                 <p>
                     ${escapeHTML(post.description)}
                 </p>
-
             </a>
-
         </article>
     `;
 }

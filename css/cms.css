@@ -1,14 +1,55 @@
 
-/* ===================================
-   CMS - PUBLICAÇÕES E ARTIGOS
-=================================== */
+/* =========================================================
+   FILES&CARNE — ESTILO DAS PUBLICAÇÕES DO CMS
+
+   Arquivo: css/cms.css
+
+   Este arquivo controla:
+   - Cards das publicações
+   - Estrutura dos artigos
+   - Sumário
+   - Texto e títulos
+   - FAQ expansível
+   - Blocos de destaque
+   - Responsividade
+
+   As cores principais podem ser alteradas em :root.
+========================================================= */
+
+
+/* =========================================================
+   1. VARIÁVEIS DE CORES
+========================================================= */
+
+:root {
+    --cms-bg-main: #0f0202;
+    --cms-bg-secondary: #1a0505;
+
+    --cms-red: #5a0f0f;
+    --cms-red-strong: #8b1e1e;
+
+    --cms-gold: #c9a14a;
+    --cms-text: #ffffff;
+    --cms-highlight: #f5e6c8;
+
+    --cms-border: #2b1010;
+}
+
+
+/* =========================================================
+   2. CARDS — PÁGINA DE PUBLICAÇÕES E HOMEPAGE
+
+   Mantém o funcionamento de #recent-posts e #posts-list.
+========================================================= */
 
 #recent-posts,
 #posts-list {
     display: grid;
+
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 16px;
-    padding: 16px;
+
+    gap: 20px;
+    padding: 20px;
 }
 
 #recent-posts .post,
@@ -20,83 +61,293 @@
 #recent-posts .img_post,
 #posts-list .img_post {
     display: block;
+
     width: 100%;
     height: auto;
-    aspect-ratio: auto;
+
     object-fit: contain;
 }
 
+
+/* =========================================================
+   3. ESTRUTURA GERAL DO ARTIGO
+========================================================= */
+
+.article-page {
+    width: 100%;
+    padding: 20px 16px 60px;
+}
+
 .cms-container {
-    max-width: 1000px;
-    margin: 24px auto;
-    padding: 24px;
+    width: min(1100px, 100%);
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .cms-article {
-    max-width: 850px;
-    margin: auto;
+    width: 100%;
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    color: var(--cms-text);
+
     overflow-wrap: anywhere;
     line-height: 1.8;
 }
 
-.cms-cover {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: 600px;
-    object-fit: contain;
-    margin-bottom: 24px;
-    border: 2px solid var(--gold);
-    border-radius: 10px;
+
+/* =========================================================
+   4. CABEÇALHO DO ARTIGO
+========================================================= */
+
+.cms-article-header {
+    margin-bottom: 35px;
+    text-align: center;
 }
 
 .cms-article h1 {
-    margin-bottom: 16px;
-    color: var(--gold);
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin: 15px 0;
+
+    color: var(--cms-gold);
+
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+
+    line-height: 1.2;
+    text-align: center;
 }
 
 .cms-description {
+    max-width: 800px;
+
+    margin: 15px auto;
+
+    color: var(--cms-highlight);
+
     font-size: 1.2rem;
+    line-height: 1.7;
+    text-align: center;
 }
 
 .cms-date {
-    margin: 12px 0 28px;
-    opacity: 0.75;
+    display: block;
+
+    margin: 15px 0 25px;
+
+    color: #c5b9a4;
+
+    font-size: 0.9rem;
+    text-align: right;
 }
+
+
+/* =========================================================
+   5. IMAGEM DE CAPA
+========================================================= */
+
+.cms-cover {
+    display: block;
+
+    width: 100%;
+    max-height: 520px;
+
+    margin: 25px auto 35px;
+
+    object-fit: contain;
+
+    border: 1px solid var(--cms-gold);
+    border-radius: 12px;
+}
+
+
+/* =========================================================
+   6. SUMÁRIO DO ARTIGO
+========================================================= */
+
+.post-sumario {
+    width: min(900px, 100%);
+
+    margin: 40px auto;
+    padding: 25px 30px;
+
+    background: var(--cms-bg-secondary);
+
+    border: 1px solid var(--cms-red);
+    border-radius: 12px;
+}
+
+.sumario-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.sumario-header span {
+    font-size: 1.5rem;
+}
+
+.sumario-header h2 {
+    margin: 0;
+
+    color: var(--cms-highlight);
+
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.sumario-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px 25px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.sumario-list li {
+    margin: 0;
+    padding: 0;
+}
+
+.sumario-list a {
+    display: flex;
+
+    align-items: center;
+    gap: 15px;
+
+    padding: 12px;
+
+    color: var(--cms-highlight);
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.sumario-list a:hover {
+    background-color: var(--cms-red);
+    transform: translateX(5px);
+}
+
+.numero {
+    min-width: 30px;
+
+    color: var(--cms-gold);
+
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 0.65rem;
+}
+
+
+/* =========================================================
+   7. CORPO DO ARTIGO
+
+   O conteúdo vem do campo "body" do Pages CMS.
+========================================================= */
 
 .cms-body {
-    line-height: 1.8;
-}
+    width: 100%;
 
-.cms-body h2,
-.cms-body h3 {
-    margin: 28px 0 12px;
-    color: var(--gold);
+    margin: 35px auto;
+
+    font-size: 1.05rem;
+    line-height: 1.9;
+    letter-spacing: 0.3px;
 }
 
 .cms-body p {
-    margin-bottom: 18px;
+    margin: 15px 0 25px;
+
+    text-align: justify;
+}
+
+.cms-body h2 {
+    margin: 45px 0 20px;
+
+    color: var(--cms-gold);
+
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+
+    text-align: center;
+    line-height: 1.4;
+}
+
+.cms-body h3 {
+    margin: 30px 0 15px;
+
+    color: var(--cms-highlight);
+
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.4rem;
+}
+
+.cms-body h4 {
+    margin: 25px 0 10px;
+
+    color: var(--cms-gold);
+    font-size: 1.15rem;
+}
+
+.cms-body strong {
+    color: var(--cms-highlight);
+}
+
+.cms-body a {
+    color: var(--cms-gold);
+    text-decoration: underline;
 }
 
 .cms-body ul,
 .cms-body ol {
-    margin: 16px 0 16px 28px;
+    margin: 20px 0 25px;
+    padding-left: 35px;
+}
+
+.cms-body li {
+    margin: 8px 0;
+    line-height: 1.7;
 }
 
 .cms-body img {
     display: block;
+
     max-width: 100%;
     height: auto;
-    margin: 20px auto;
+
+    margin: 25px auto;
+
     border-radius: 8px;
 }
 
 .cms-body blockquote {
-    margin: 20px 0;
-    padding: 12px 20px;
-    border-left: 4px solid var(--gold);
-    background: #2b0a0a;
+    margin: 30px 0;
+    padding: 20px 25px;
+
+    background: var(--cms-bg-secondary);
+
+    border-left: 4px solid var(--cms-gold);
+    border-radius: 5px;
+}
+
+.cms-body hr {
+    margin: 35px 0;
+
+    border: 0;
+    border-top: 1px solid var(--cms-gold);
 }
 
 .cms-body pre {
@@ -104,18 +355,469 @@
     overflow-x: auto;
 }
 
+
+/* =========================================================
+   8. BLOCO DE DESTAQUE / DICA FILES&CARNE
+
+   Pode ser usado quando o conteúdo do artigo tiver
+   um bloco com a classe "files-dica".
+========================================================= */
+
+.files-dica {
+    margin: 55px 0;
+    padding: 35px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        var(--cms-bg-secondary),
+        var(--cms-bg-main)
+    );
+
+    border: 1px solid var(--cms-gold);
+    border-radius: 15px;
+}
+
+.files-dica h2 {
+    margin: 15px 0;
+
+    color: var(--cms-gold);
+    text-align: center;
+}
+
+.files-dica p {
+    max-width: 800px;
+
+    margin: 15px auto;
+
+    line-height: 1.8;
+    text-align: center;
+}
+
+.dica-label {
+    color: var(--cms-gold);
+
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 0.7rem;
+}
+
+
+/* =========================================================
+   9. FAQ — PERGUNTAS FREQUENTES
+
+   Cada pergunta é um elemento <details>.
+   O usuário clica no <summary> para abrir a resposta.
+========================================================= */
+
+.details-section {
+    margin: 55px 0;
+}
+
+.details-section > h2 {
+    margin: 25px 0;
+
+    color: var(--cms-gold);
+
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+
+    text-align: center;
+}
+
+.details {
+    margin: 18px 0;
+    padding: 0 20px;
+
+    background: var(--cms-bg-secondary);
+
+    border: 1px solid var(--cms-red);
+    border-radius: 10px;
+
+    transition: border-color 0.2s ease;
+}
+
+.details[open] {
+    border-color: var(--cms-gold);
+}
+
+.details summary {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 65px;
+    padding: 15px 45px 15px 5px;
+
+    color: var(--cms-highlight);
+
+    cursor: pointer;
+    list-style: none;
+}
+
+/* Remove o marcador padrão do navegador */
+.details summary::-webkit-details-marker {
+    display: none;
+}
+
+.details summary::marker {
+    content: "";
+}
+
+/* Ícone de + */
+.details summary::after {
+    content: "+";
+
+    position: absolute;
+    right: 8px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--cms-gold);
+
+    font-size: 2rem;
+    font-weight: bold;
+
+    transition: transform 0.2s ease;
+}
+
+/* Ícone muda para - quando a pergunta está aberta */
+.details[open] summary::after {
+    content: "−";
+}
+
+/* Texto da pergunta */
+.details summary h3 {
+    margin: 0;
+
+    color: var(--cms-highlight);
+
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+
+    line-height: 1.5;
+}
+
+/* Caixa que contém a resposta */
+.faq {
+    padding: 0 5px 20px;
+}
+
+.faq-item {
+    margin: 0;
+    padding: 20px;
+
+    background: var(--cms-bg-main);
+
+    border-left: 3px solid var(--cms-gold);
+    border-radius: 5px;
+}
+
+.faq-item p {
+    margin: 0;
+
+    color: var(--cms-text);
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+
+    text-align: justify;
+}
+
+/* Animação de abertura da resposta */
+.details[open] .faq {
+    animation: faq-open 0.25s ease;
+}
+
+@keyframes faq-open {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   10. DIVISÓRIA
+========================================================= */
+
+.divisoria {
+    width: 100%;
+    height: 2px;
+
+    margin: 45px 0;
+
+    background: var(--cms-gold);
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   11. MENSAGENS DE CARREGAMENTO E ERRO
+========================================================= */
+
+.article-loading,
+.article-error {
+    max-width: 800px;
+
+    margin: 50px auto;
+    padding: 30px;
+
+    color: var(--cms-highlight);
+    text-align: center;
+
+    background: var(--cms-bg-secondary);
+
+    border: 1px solid var(--cms-red);
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   12. RESPONSIVIDADE — TABLETS
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .cms-container {
+        padding: 15px;
+    }
+
+    .cms-article {
+        max-width: 100%;
+    }
+
+    .post-sumario {
+        padding: 22px;
+    }
+
+    .cms-body {
+        font-size: 1rem;
+    }
+
+}
+
+
+/* =========================================================
+   13. RESPONSIVIDADE — CELULARES
+========================================================= */
+
 @media (max-width: 600px) {
-    #recent-posts,
-    #posts-list {
-        grid-template-columns: 1fr;
-        padding: 10px;
+
+    .article-page {
+        padding: 10px 8px 35px;
     }
 
     .cms-container {
-        padding: 14px;
+        padding: 10px;
+    }
+
+    .cms-article h1 {
+        font-size: 1.9rem;
+    }
+
+    .cms-description {
+        font-size: 1rem;
+    }
+
+    .cms-date {
+        text-align: center;
     }
 
     .cms-cover {
         max-height: none;
+    }
+
+    /* Sumário passa a ter apenas uma coluna */
+    .sumario-list {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .post-sumario {
+        margin: 25px auto;
+        padding: 18px;
+    }
+
+    .sumario-header h2 {
+        font-size: 1.6rem;
+    }
+
+    /* Ajusta os títulos e parágrafos */
+    .cms-body h2 {
+        margin-top: 32px;
+        font-size: 1.5rem;
+    }
+
+    .cms-body h3 {
+        font-size: 1.2rem;
+    }
+
+    .cms-body p {
+        text-align: left;
+    }
+
+    .cms-body ul,
+    .cms-body ol {
+        padding-left: 25px;
+    }
+
+    /* FAQ ocupa toda a largura disponível */
+    .details {
+        padding: 0 12px;
+    }
+
+    .details summary {
+        padding-right: 35px;
+    }
+
+    .details summary h3 {
+        font-size: 1.05rem;
+    }
+
+    .faq-item {
+        padding: 15px;
+    }
+
+    .faq-item p {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+
+    /* Bloco de dica */
+    .files-dica {
+        margin: 35px 0;
+        padding: 22px 15px;
+    }
+
+    .files-dica p {
+        font-size: 0.95rem;
+    }
+
+}
+
+
+/* =========================================================
+   14. ACESSIBILIDADE — REDUÇÃO DE MOVIMENTO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .details,
+    .details summary::after,
+    .sumario-list a {
+        transition: none;
+    }
+
+    .details[open] .faq {
+        animation: none;
+    }
+
+}
+
+/* =========================================
+   FAQ - PERGUNTAS FREQUENTES
+   ========================================= */
+
+/* Área completa do FAQ */
+.details-section {
+    margin: 50px 0;
+    padding: 25px;
+    background-color: var(--cms-bg-secondary);
+    border: 2px solid var(--cms-red);
+    border-radius: 8px;
+}
+
+/* Título da seção */
+.details-section > h2 {
+    color: var(--cms-gold);
+    margin-bottom: 25px;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+/* Cada pergunta */
+.details {
+    margin-bottom: 15px;
+    border: 1px solid var(--cms-red-strong);
+    border-radius: 6px;
+    background-color: var(--cms-bg-main);
+    overflow: hidden;
+}
+
+/* Cabeçalho clicável da pergunta */
+.details summary {
+    position: relative;
+    padding: 18px 45px 18px 18px;
+    color: var(--cms-highlight);
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+}
+
+/* Remove a seta padrão do navegador */
+.details summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Símbolo de + */
+.details summary::after {
+    content: "+";
+    position: absolute;
+    right: 18px;
+    color: var(--cms-gold);
+    font-size: 1.5rem;
+}
+
+/* Símbolo de - quando aberto */
+.details[open] summary::after {
+    content: "−";
+}
+
+/* Efeito ao passar o mouse */
+.details summary:hover {
+    background-color: var(--cms-red);
+}
+
+/* Resposta */
+.faq {
+    padding: 18px;
+    color: var(--cms-text);
+    line-height: 1.7;
+    border-top: 1px solid var(--cms-red-strong);
+}
+
+/* Parágrafos dentro das respostas */
+.faq p {
+    margin-bottom: 12px;
+}
+
+/* Último parágrafo sem margem inferior */
+.faq p:last-child {
+    margin-bottom: 0;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+    .details-section {
+        padding: 15px;
+    }
+
+    .details summary {
+        font-size: 1rem;
+        padding: 15px 40px 15px 12px;
+    }
+
+    .faq {
+        padding: 12px;
     }
 }
