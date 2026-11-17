@@ -102,20 +102,21 @@
 ========================================================= */
 
 .cms-article-header {
-    margin-bottom: 35px;
+    margin-bottom: 0;
     text-align: center;
 }
 
 .cms-article h1 {
     margin: 15px 0;
-
-    color: var(--cms-gold);
+    stroke-width: 5px;
+    color: var(--cms-text);
 
     font-family: "Pixelify Sans", sans-serif;
     font-size: clamp(2rem, 5vw, 3.2rem);
 
     line-height: 1.2;
     text-align: center;
+    -webkit-text-stroke: #0f0202 2px;
 }
 
 .cms-description {
@@ -128,6 +129,7 @@
     font-size: 1.2rem;
     line-height: 1.7;
     text-align: center;
+    letter-spacing: 1px;
 }
 
 .cms-date {
@@ -139,6 +141,7 @@
 
     font-size: 0.9rem;
     text-align: right;
+    letter-spacing: 0.9px;
 }
 
 
@@ -301,6 +304,10 @@
     color: var(--cms-gold);
     font-size: 1.15rem;
 }
+.cms-body h5{
+    letter-spacing: 1.5px;
+    font-weight: 1000px;
+}
 
 .cms-body strong {
     color: var(--cms-highlight);
@@ -341,6 +348,11 @@
 
     border-left: 4px solid var(--cms-gold);
     border-radius: 5px;
+}
+.cms-body em{
+    letter-spacing: 2px;
+    font-weight: 600px;
+    color: rgb(255, 248, 117);
 }
 
 .cms-body hr {
