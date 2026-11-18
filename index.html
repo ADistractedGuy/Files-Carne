@@ -21,12 +21,17 @@
 
     <meta name="theme-color" content="#1a0505">
 
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="File&Carne — Guia de Carnes">
-    <meta property="og:description"
-          content="Descubra cortes, aprenda técnicas de preparo e conheça melhor o universo das carnes.">
     <meta property="og:image"
-          content="Assets/imgs/new-logo-removebg(1).png">
+        content="https://adistractedguy.github.io/Files-Carne/Assets/imgs/new-logo-removebg(1).png">
+
+    <meta property="og:url"
+        content="https://adistractedguy.github.io/Files-Carne/">
+
+    <meta property="og:site_name"
+        content="Files&Carne">
+
+    <meta name="twitter:card"
+        content="summary_large_image">
 
     <link rel="icon" href="Assets/imgs/new-logo-removebg(1).png">
      
@@ -75,32 +80,35 @@
 </header>
 
 <nav class="container" aria-label="Navegação principal">
-    <a href="pages/about.html" class="btt btt-sound">
-        <img src="Assets/imgs/pixel-meats/pixel-meats-32/bacon.png"
-             alt="" class="icon">
-        <span class="pixelify-sans-btt">Sobre</span>
+
+    <a href="pages/post.html" class="btt">
+        Publicações
     </a>
 
-    <a href="pages/quiz.html" class="btt btt-sound">
-        <img src="Assets/imgs/pixel-meats/pixel-meats-32/hamburger-patty.png"
-             alt="" class="icon">
-        <span class="pixelify-sans-btt">Quiz</span>
+    <a href="pages/quiz.html" class="btt">
+        Quiz
     </a>
 
-    <a href="pages/post.html" class="btt btt-sound">
-        <img src="Assets/imgs/pixel-meats/pixel-meats-32/meatball.png"
-             alt="" class="icon">
-        <span class="pixelify-sans-btt">Posts</span>
+    <a href="pages/about.html" class="btt">
+        Sobre
     </a>
 
-    <button id="theme-toggle" class="btt">​☀️​</button>
+    <button
+        id="theme-toggle"
+        class="btt"
+        type="button"
+        aria-label="Alternar tema"
+        aria-pressed="false"
+    >
+        ☀️
+    </button>
 
     <!-- Botão para abrir o ButcherBot -->
     <button class="btt" id="open-chat" type="button">
        <p> -> BUTCHERBOT <- </p> 
     </button>
 
-    </nav>
+</nav>
 
 <main>
     <section class="hero" aria-labelledby="recent-posts-title">
@@ -135,8 +143,8 @@
 
 <footer>
     <p class="foot">
-        &copy; <span id="current-year">2026</span> File&Carne.
-        Todos os direitos reservados.
+        © <span id="current-year">2026</span>
+        Files&Carne. Todos os direitos reservados.
     </p>
 
     <button id="B-cat"

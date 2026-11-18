@@ -22,14 +22,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
 
-
     <!-- ============ Scripts - Essenciais ============-->
-    <script src="/js/quiz/question.js" defer></script>
-    <script src="/js/quiz/score.js" defer></script>
-    <script src="/js/quiz/quiz.js" defer></script>
+    <script src="../js/quiz/question.js" defer></script>
+    <script src="../js/quiz/score.js" defer></script>
+    <script src="../js/quiz/quiz.js" defer></script>
 </head>
 <body>
-
 
 <header class="">
     <div class="logo">
@@ -43,33 +41,31 @@
 
 </header>
 
-<nav class="container">
-    <a href="about.html" id="btt-sound" class="btt">
-        <img src="/Assets/imgs/pixel-meats/pixel-meats-32/bacon.png" class="icon">
-            <p class="pixelify-sans-btt">About</p>
-        <img src="/Assets/imgs/pixel-meats/pixel-meats-32/bacon.png" class="icon">
+<nav class="container" aria-label="Navegação principal">
+
+    <a href="../index.html" class="btt">Início</a>
+
+    <a href="post.html" class="btt">
+        Publicações
     </a>
 
-    
-    <a href="../index.html" id="btt-sound" class="btt">
-        <img src="/Assets/imgs/pixel-meats/pixel-meats-32/hamburger-patty.png" class="icon">
-        <p class="pixelify-sans-btt">HOME</p>
-        <img src="/Assets/imgs/pixel-meats/pixel-meats-32/hamburger-patty.png" class="icon">
-    
+    <a href="quiz.html" class="btt">
+        Quiz
     </a>
-    <a href="post.html" id="btt-sound" class="btt">
-        <img src="/Assets/imgs/pixel-meats/pixel-meats-32/meatball.png" class="icon">
-        <p class="pixelify-sans-btt">Posts</p>
-        <img src="/Assets/imgs/pixel-meats/pixel-meats-32/meatball.png" class="icon">
+
+    <a href="about.html" class="btt">
+        Sobre
     </a>
-   
-    <a href="#" id="btt-sound" class="btt">
-        <img src="/Assets/imgs/pixel-meats/pixel-meats-32/ham.png" class="icon">
-        <p class="pixelify-sans-btt">Créditos</p>
-        <img src="/Assets/imgs/pixel-meats/pixel-meats-32/ham.png" class="icon">
-    </a>
-    
-    <button id="theme-toggle" class="btt">​☀️​</button>
+
+    <button
+        id="theme-toggle"
+        class="btt"
+        type="button"
+        aria-label="Alternar tema"
+        aria-pressed="false"
+    >
+        ☀️
+    </button>
 
 </nav>
 
@@ -88,6 +84,16 @@
                     Questão <span id="question-number">1</span>
                     de
                     <span id="total-questions">10</span>
+                </div>
+                
+                <div
+                    class="progress-container"
+                    role="progressbar"
+                    aria-label="Progresso do quiz"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="0">
+                    <div class="progress-bar"></div>
                 </div>
 
                 <h3 class="pergunta">

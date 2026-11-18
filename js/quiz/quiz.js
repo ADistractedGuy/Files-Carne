@@ -269,7 +269,7 @@ function checkAnswer(event) {
 
             nextQuestion();
 
-        }, 10000);
+        }, 6000);
 
     }
 

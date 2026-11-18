@@ -23,7 +23,8 @@
     <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
 
     <!-- Sistema de integração com o Pages CMS -->
-    <script src="js/cms-posts.js" defer></script>
+    <script src="../js/cms-posts.js" defer></script>
+    <script src="../js/main.js" defer></script>
     
 </head>
 
@@ -42,12 +43,33 @@
     </div>
 </header>
 
-<nav class="container">
-    <a href="../index.html" class="btt">Início</a>
-    <a href="about.html" class="btt">Sobre</a>
-    <a href="quiz.html" class="btt">Quiz</a>
-</nav>
+<nav class="container" aria-label="Navegação principal">
 
+    <a href="../index.html" class="btt">Início</a>
+
+    <a href="post.html" class="btt">
+        Publicações
+    </a>
+
+    <a href="quiz.html" class="btt">
+        Quiz
+    </a>
+
+    <a href="about.html" class="btt">
+        Sobre
+    </a>
+
+    <button
+        id="theme-toggle"
+        class="btt"
+        type="button"
+        aria-label="Alternar tema"
+        aria-pressed="false"
+    >
+        ☀️
+    </button>
+
+</nav>
 <main>
     <section class="hero">
 

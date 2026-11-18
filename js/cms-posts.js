@@ -213,13 +213,12 @@ async function getPosts() {
         .filter(post =>
             post &&
             post.title &&
-            post.description &&
-            post.image
+            post.description
         )
         .sort((a, b) =>
             new Date(b.date) - new Date(a.date)
         );
-}
+    }
 
 
 
@@ -234,17 +233,24 @@ function createPostCard(post) {
         "pages/article.html?slug=" +
         encodeURIComponent(post.slug);
 
+    // Só cria a imagem quando houver uma cadastrada.
+    const imageHTML = post.image
+        ? `
+            <img
+                class="img_post"
+                src="${escapeHTML(getImageUrl(post.image))}"
+                alt="${escapeHTML(post.title)}"
+                loading="lazy"
+            >
+        `
+        : "";
+
     return `
         <article class="post">
 
             <a href="${articleUrl}">
 
-                <img
-                    class="img_post"
-                    src="${escapeHTML(getImageUrl(post.image))}"
-                    alt="${escapeHTML(post.title)}"
-                    loading="lazy"
-                >
+                ${imageHTML}
 
                 <h2 class="pixelify-sans-400">
                     ${escapeHTML(post.title)}
@@ -253,6 +259,10 @@ function createPostCard(post) {
                 <p>
                     ${escapeHTML(post.description)}
                 </p>
+
+                <span class="read-more">
+                    Ler artigo →
+                </span>
 
             </a>
 

@@ -30,16 +30,27 @@ function resetScore() {
 // Atualiza a barra de progresso
 function updateProgress() {
 
-    const progressBar = document.querySelector(".progress-bar");
+    const progressBar =
+        document.querySelector(".progress-bar");
 
-    if (!progressBar) {
-        return;
-    }
+    const progressContainer =
+        document.querySelector(".progress-container");
 
-    const totalQuestions = questions.length;
+    if (!progressBar) return;
 
-    const progress = ((currentQuestion + 1) / totalQuestions) * 100;
+    const totalQuestions = shuffledQuestions.length;
+
+    const progress =
+        (currentQuestion / totalQuestions) * 100;
 
     progressBar.style.width = progress + "%";
 
+    if (progressContainer) {
+        progressContainer.setAttribute(
+            "aria-valuenow",
+            String(Math.round(progress))
+        );
+    }
 }
+
+
