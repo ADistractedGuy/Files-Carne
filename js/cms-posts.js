@@ -106,6 +106,7 @@ function parsePost(content, filename) {
         date: data.date || "",
         image: data.image || "",
         faq: Array.isArray(data.faq) ? data.faq : [],
+        sources: Array.isArray(data.sources) ? data.sources : [],
         body: body
     };
 }
@@ -413,6 +414,86 @@ function createFAQ(faqItems) {
     `;
 }
 
+/* =========================================
+   CRIAÇÃO DA SEÇÃO DE FONTES E REFERÊNCIAS
+   ========================================= */
+
+   function createSources(sources) {
+
+    // Não exibe a seção se não houver fontes.
+    if (!Array.isArray(sources) || sources.length === 0) {
+        return "";
+    }
+
+    const references = sources
+        .filter(source =>
+            source &&
+            source.title &&
+            source.url
+        )
+        .map(source => {
+
+            const title = escapeHTML(source.title);
+            const institution = escapeHTML(source.institution || "");
+
+            // Valida o endereço para aceitar somente links HTTP/HTTPS.
+            let safeURL = "";
+
+            try {
+                const parsedURL = new URL(source.url);
+
+                if (
+                    parsedURL.protocol === "https:" ||
+                    parsedURL.protocol === "http:"
+                ) {
+                    safeURL = escapeHTML(parsedURL.href);
+                }
+            } catch (error) {
+                console.warn("Link de referência inválido:", source.url);
+            }
+
+            // Não cria um link clicável se o endereço for inválido.
+            const sourceLink = safeURL
+                ? `<a href="${safeURL}" target="_blank"
+                     rel="noopener noreferrer">Acessar fonte</a>`
+                : "";
+
+            return `
+                <li class="source-item">
+
+                    <strong>${title}</strong>
+
+                    ${institution
+                        ? `<span class="source-institution">${institution}</span>`
+                        : ""
+                    }
+
+                    ${sourceLink}
+
+                </li>
+            `;
+        })
+        .join("");
+
+    // Não exibe uma seção vazia caso todas as referências sejam inválidas.
+    if (!references) return "";
+
+    return `
+        <section class="sources-section"
+                 aria-labelledby="sources-title">
+
+            <h2 id="sources-title">
+                Fontes e referências
+            </h2>
+
+            <ol class="sources-list">
+                ${references}
+            </ol>
+
+        </section>
+    `;
+}
+
 
 /* =========================================
    ABERTURA DE UMA PUBLICAÇÃO INDIVIDUAL
@@ -464,6 +545,7 @@ async function loadSinglePost() {
 
         // Gera o FAQ com as perguntas do CMS.
         const faqHTML = createFAQ(post.faq);
+        const sourcesHTML = createSources(post.sources);
 
         /*
            Monta o artigo completo.
@@ -510,6 +592,9 @@ async function loadSinglePost() {
 
                 <!-- PERGUNTAS FREQUENTES -->
                 ${faqHTML}
+
+                <!-- FONTES E REFERÊNCIAS -->
+                ${sourcesHTML}
 
             </article>
 

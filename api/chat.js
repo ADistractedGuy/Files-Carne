@@ -9,7 +9,7 @@ const ORIGENS_PERMITIDAS = [
     "http://localhost:5500"
 ];
 
-export default async function handler(req, res) {
+export default async     function handler(req, res) {
 
     // 1. Identifica a origem da requisição
     const origem = req.headers.origin;
