@@ -70,3 +70,25 @@ content:
             label: Resposta
             type: rich-text
             required: true
+
+      - name: sources
+        label: Fontes e referências
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "Fonte {index}"
+        fields:
+          - name: title
+            label: Título da fonte
+            type: string
+            required: true
+
+          - name: institution
+            label: Autor ou instituição
+            type: string
+
+          - name: url
+            label: Link da fonte
+            type: string
+            required: true
