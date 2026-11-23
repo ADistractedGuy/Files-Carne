@@ -833,3 +833,75 @@
         padding: 12px;
     }
 }
+/* =========================================
+   15. FONTES E REFERÊNCIAS
+   ========================================= */
+
+   .sources-section {
+    margin: 55px 0 30px;
+    padding: 25px;
+
+    background: var(--cms-bg-secondary);
+
+    border: 1px solid var(--cms-red);
+    border-left: 4px solid var(--cms-gold);
+    border-radius: 10px;
+}
+
+.sources-section h2 {
+    margin: 0 0 25px;
+
+    color: var(--cms-gold);
+
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    text-align: center;
+}
+
+.sources-list {
+    margin: 0;
+    padding-left: 25px;
+}
+
+.source-item {
+    margin: 18px 0;
+    padding-left: 8px;
+
+    color: var(--cms-text);
+    line-height: 1.7;
+}
+
+.source-item strong {
+    display: block;
+    color: var(--cms-highlight);
+}
+
+.source-institution {
+    display: block;
+    color: #c5b9a4;
+    font-size: 0.95rem;
+}
+
+.source-item a {
+    display: inline-block;
+    margin-top: 5px;
+
+    color: var(--cms-gold);
+    text-decoration: underline;
+    overflow-wrap: anywhere;
+}
+
+.source-item a:hover {
+    color: var(--cms-highlight);
+}
+
+@media (max-width: 600px) {
+    .sources-section {
+        padding: 18px 15px;
+        margin-top: 35px;
+    }
+
+    .source-item {
+        font-size: 0.95rem;
+    }
+}

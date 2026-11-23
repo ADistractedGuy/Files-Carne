@@ -414,6 +414,8 @@ function createFAQ(faqItems) {
     `;
 }
 
+
+
 /* =========================================
    CRIAÇÃO DA SEÇÃO DE FONTES E REFERÊNCIAS
    ========================================= */
