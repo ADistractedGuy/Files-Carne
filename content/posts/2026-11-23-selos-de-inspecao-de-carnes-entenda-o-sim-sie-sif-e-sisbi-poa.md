@@ -35,6 +35,8 @@ sources:
 ---
 # Selos de inspeção de carnes: entenda o SIM, SIE, SIF e SISBI-POA
 
+> "First we eat, then we do everything else." — M.F.K. Fisher
+
 Ao comprar carnes, leite, ovos, queijos e outros produtos de origem animal, você provavelmente já encontrou siglas como SIM, SIE e SIF nas embalagens. Esses símbolos estão relacionados aos serviços oficiais de inspeção e possuem uma função muito importante: indicar que o estabelecimento e seus produtos estão submetidos à fiscalização sanitária correspondente.
 
 Mas você sabe o que cada sigla significa? Será que um produto com SIM pode ser vendido em outro estado? O SIF representa uma qualidade superior? E o que é o SISBI-POA?
