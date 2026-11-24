@@ -42,7 +42,7 @@ sources:
 ---
 # Carnes de primeira, segunda e terceira: entenda as diferenças
 
-> "Knowledge is not power; it is only potential power. The only real power is execution, which trumps knowledge."
+> "Knowledge is not power; it is only potential power. The only real power is execution, which trumps knowledge." -- Tony Robbins
 
 Quando vamos ao açougue, é comum encontrar os termos carnes de primeira, segunda e terceira. Essa classificação é bastante utilizada no comércio brasileiro para diferenciar os cortes bovinos, principalmente em relação à maciez, à localização no animal e às formas de preparo.
 
